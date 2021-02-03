@@ -15,6 +15,7 @@ import sqlancer.common.oracle.TestOracle;
 import sqlancer.sqlite3.SQLite3Options.SQLite3OracleFactory;
 import sqlancer.sqlite3.oracle.SQLite3Fuzzer;
 import sqlancer.sqlite3.oracle.SQLite3NoRECOracle;
+import sqlancer.sqlite3.oracle.SQLite3SubsetOracle;
 import sqlancer.sqlite3.oracle.SQLite3PivotedQuerySynthesisOracle;
 import sqlancer.sqlite3.oracle.tlp.SQLite3TLPAggregateOracle;
 import sqlancer.sqlite3.oracle.tlp.SQLite3TLPDistinctOracle;
@@ -91,6 +92,12 @@ public class SQLite3Options implements DBMSSpecificOptions<SQLite3OracleFactory>
     public boolean executeQuery = true;
 
     public enum SQLite3OracleFactory implements OracleFactory<SQLite3GlobalState> {
+        Subset {
+            @Override
+            public TestOracle create(SQLite3GlobalState globalState) throws SQLException {
+                return new SQLite3SubsetOracle(globalState);
+            }
+        },
         PQS {
             @Override
             public TestOracle create(SQLite3GlobalState globalState) throws SQLException {
