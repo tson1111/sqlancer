@@ -13,8 +13,10 @@ public abstract class SubsetBase<S extends SQLGlobalState<?, ?>> implements Test
     protected final StateLogger logger;
     protected final MainOptions options;
     protected final SQLConnection con;
-    protected String optimizedQueryString;
-    protected String unoptimizedQueryString;
+    protected String originalQueryString;
+    protected String subsetQueryString;
+    protected String supersetQueryString;
+    protected boolean useAggregate;
 
     public SubsetBase(S state) {
         this.state = state;

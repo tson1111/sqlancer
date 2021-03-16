@@ -1,10 +1,12 @@
 package sqlancer.sqlite3.oracle;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import sqlancer.ComparatorHelper;
 import sqlancer.IgnoreMeException;
 import sqlancer.Randomly;
 import sqlancer.common.oracle.SubsetBase;
@@ -17,6 +19,8 @@ import sqlancer.sqlite3.SQLite3Visitor;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join;
+import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3ColumnName;
 import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixText;
 import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixUnaryOperation;
@@ -62,34 +66,16 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         select.setFromTables(tableRefs);
         select.setJoinClauses(joinStatements);
 
-        int optimizedCount = getOptimizedQuery(select, randomWhereCondition);
-        int unoptimizedCount = getUnoptimizedQuery(select, randomWhereCondition);
-        if (optimizedCount == NO_VALID_RESULT || unoptimizedCount == NO_VALID_RESULT) {
-            throw new IgnoreMeException();
-        }
-        if (optimizedCount != unoptimizedCount) {
-            state.getState().getLocalState().log(optimizedQueryString + ";\n" + unoptimizedQueryString + ";");
-            throw new AssertionError(optimizedCount + " " + unoptimizedCount);
-        }
+        getOriginalQuery(select, randomWhereCondition);
+        getSubsetQuery(select, randomWhereCondition);
+        getSupersetQuery(select, randomWhereCondition);
 
+        useAggregate = Randomly.getBoolean();
+        checkSubsetQuery(subsetQueryString, originalQueryString, useAggregate);
+        checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
 
-    private int getUnoptimizedQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
-        SQLite3PostfixUnaryOperation isTrue = new SQLite3PostfixUnaryOperation(PostfixUnaryOperator.IS_TRUE,
-                randomWhereCondition);
-        SQLite3PostfixText asText = new SQLite3PostfixText(isTrue, " as count", null);
-        select.setFetchColumns(Arrays.asList(asText));
-        select.setWhereClause(null);
-        unoptimizedQueryString = "SELECT SUM(count) FROM (" + SQLite3Visitor.asString(select) + ")";
-        if (options.logEachSelect()) {
-            logger.writeCurrent(unoptimizedQueryString);
-        }
-        SQLQueryAdapter q = new SQLQueryAdapter(unoptimizedQueryString, errors);
-        return extractCounts(q);
-    }
-
-    private int getOptimizedQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
-        boolean useAggregate = Randomly.getBoolean();
+    private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
         if (Randomly.getBoolean()) {
             select.setOrderByExpressions(gen.generateOrderBys());
         }
@@ -101,35 +87,73 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             select.setFetchColumns(Arrays.asList(aggr));
         }
         select.setWhereClause(randomWhereCondition);
-        optimizedQueryString = SQLite3Visitor.asString(select);
+        originalQueryString = SQLite3Visitor.asString(select);
         if (options.logEachSelect()) {
-            logger.writeCurrent(optimizedQueryString);
+            logger.writeCurrent(originalQueryString);
         }
-        SQLQueryAdapter q = new SQLQueryAdapter(optimizedQueryString, errors);
-        return useAggregate ? extractCounts(q) : countRows(q);
     }
 
-    private int countRows(SQLQueryAdapter q) {
-        int count = 0;
-        try (SQLancerResultSet rs = q.executeAndGet(state)) {
-            if (rs == null) {
-                return NO_VALID_RESULT;
-            } else {
-                try {
-                    while (rs.next()) {
-                        count++;
-                    }
-                } catch (SQLException e) {
-                    count = NO_VALID_RESULT;
-                }
-            }
-        } catch (Exception e) {
-            if (e instanceof IgnoreMeException) {
-                throw (IgnoreMeException) e;
-            }
-            throw new AssertionError(unoptimizedQueryString, e);
+    private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
+        if (Randomly.getBoolean()) {
+            select.setOrderByExpressions(gen.generateOrderBys());
         }
-        return count;
+        if (useAggregate) {
+            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(Collections.emptyList(),
+                    SQLite3Aggregate.SQLite3AggregateFunction.COUNT_ALL)));
+        } else {
+            SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
+            select.setFetchColumns(Arrays.asList(aggr));
+        }
+        SQLite3Expression andExpression = new Sqlite3BinaryOperation(randomWhereCondition,
+                gen.generateExpression(), BinaryOperator.AND);
+        select.setWhereClause(andExpression);
+        subsetQueryString = SQLite3Visitor.asString(select);
+        if (options.logEachSelect()) {
+            logger.writeCurrent(subsetQueryString);
+        }
+    }
+
+    private void getSupersetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
+        if (Randomly.getBoolean()) {
+            select.setOrderByExpressions(gen.generateOrderBys());
+        }
+        if (useAggregate) {
+            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(Collections.emptyList(),
+                    SQLite3Aggregate.SQLite3AggregateFunction.COUNT_ALL)));
+        } else {
+            SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
+            select.setFetchColumns(Arrays.asList(aggr));
+        }
+        SQLite3Expression orExpression = new Sqlite3BinaryOperation(randomWhereCondition,
+                gen.generateExpression(), BinaryOperator.OR);
+        select.setWhereClause(orExpression);
+        supersetQueryString = SQLite3Visitor.asString(select);
+        if (options.logEachSelect()) {
+            logger.writeCurrent(supersetQueryString);
+        }
+    }
+
+    private void checkSubsetQuery(String subsetQuery, String originalQuery, boolean useAggregate) throws SQLException {
+        if (useAggregate) {
+            SQLQueryAdapter qSubset = new SQLQueryAdapter(subsetQuery, errors);
+            SQLQueryAdapter qOrigin = new SQLQueryAdapter(originalQuery, errors);
+            int subsetCount = extractCounts(qSubset), originCount = extractCounts(qOrigin);
+            if (subsetCount == NO_VALID_RESULT || originCount == NO_VALID_RESULT) {
+                throw new IgnoreMeException();
+            }
+            if (subsetCount > originCount) {
+                state.getState().getLocalState().log("SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
+                throw new AssertionError(subsetCount + " " + originCount);
+            }
+        } else {
+            List<String> originalResultSet =
+                    ComparatorHelper.getResultSetFirstColumnAsString(originalQuery, errors, state);
+            List<String> combinedString = new ArrayList<>();
+            List<String> secondResultSet = ComparatorHelper.getTwoCombinedResultSetNoDuplicates(originalQuery,
+                    subsetQuery, combinedString, true, state, errors);
+            ComparatorHelper.assumeResultSetsAreEqual(originalResultSet, secondResultSet, originalQuery, combinedString,
+                    state);
+        }
     }
 
     private int extractCounts(SQLQueryAdapter q) {
@@ -150,7 +174,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             if (e instanceof IgnoreMeException) {
                 throw (IgnoreMeException) e;
             }
-            throw new AssertionError(unoptimizedQueryString, e);
+            throw new AssertionError(originalQueryString, e);
         }
         return count;
     }

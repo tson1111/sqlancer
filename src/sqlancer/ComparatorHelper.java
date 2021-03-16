@@ -151,4 +151,37 @@ public final class ComparatorHelper {
         return secondResultSet;
     }
 
+    public static List<String> getTwoCombinedResultSet(String firstQueryString, String secondQueryString,
+                                                    List<String> combinedString, boolean asUnion, SQLGlobalState<?, ?> state,
+                                                    ExpectedErrors errors) throws SQLException {
+        List<String> secondResultSet;
+        if (asUnion) {
+            String unionString = firstQueryString + " UNION ALL " + secondQueryString;
+            combinedString.add(unionString);
+            secondResultSet = getResultSetFirstColumnAsString(unionString, errors, state);
+        } else {
+            secondResultSet = new ArrayList<>();
+            secondResultSet.addAll(getResultSetFirstColumnAsString(firstQueryString, errors, state));
+            secondResultSet.addAll(getResultSetFirstColumnAsString(secondQueryString, errors, state));
+            combinedString.add(firstQueryString);
+            combinedString.add(secondQueryString);
+        }
+        return secondResultSet;
+    }
+
+    public static List<String> getTwoCombinedResultSetNoDuplicates(String firstQueryString, String secondQueryString,
+                                                                List<String> combinedString, boolean asUnion, SQLGlobalState<?, ?> state,
+                                                                ExpectedErrors errors) throws SQLException {
+        String unionString;
+        if (asUnion) {
+            unionString = firstQueryString + " UNION " + secondQueryString;
+        } else {
+            unionString = "SELECT DISTINCT * FROM (" + firstQueryString + " UNION ALL " + secondQueryString + ")";
+        }
+        List<String> secondResultSet;
+        combinedString.add(unionString);
+        secondResultSet = getResultSetFirstColumnAsString(unionString, errors, state);
+        return secondResultSet;
+    }
+
 }
