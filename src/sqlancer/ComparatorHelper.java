@@ -114,6 +114,38 @@ public final class ComparatorHelper {
         }
     }
 
+    public static void assumeResultSetsAreSubset(List<String> resultSet, List<String> subsetResultSet,
+                                                String originalQueryString, String subsetQueryString, SQLGlobalState<?, ?> state) {
+        if (resultSet.size() < subsetResultSet.size()) {
+            String queryFormatString = "-- %s;\n-- cardinality: %d";
+            String firstQueryString = String.format(queryFormatString, originalQueryString, resultSet.size());
+            String secondQueryString = String.format(queryFormatString, subsetQueryString, subsetResultSet.size());
+            state.getState().getLocalState().log(String.format("%s\n%s", firstQueryString, secondQueryString));
+            String assertionMessage = String.format("the size of the result sets mismatch (%d and %d)!\n%s\n%s",
+                    resultSet.size(), subsetResultSet.size(), firstQueryString, secondQueryString);
+            throw new AssertionError(assertionMessage);
+        }
+
+        Set<String> firstHashSet = new HashSet<>(resultSet);
+        Set<String> secondHashSet = new HashSet<>(subsetResultSet);
+
+        if (!firstHashSet.containsAll(secondHashSet)) {
+            Set<String> firstResultSetMisses = new HashSet<>(firstHashSet);
+            firstResultSetMisses.removeAll(secondHashSet);
+            Set<String> secondResultSetMisses = new HashSet<>(secondHashSet);
+            secondResultSetMisses.removeAll(firstHashSet);
+            String queryFormatString = "-- %s;\n-- misses: %s";
+            String firstQueryString = String.format(queryFormatString, originalQueryString, firstResultSetMisses);
+            String secondQueryString = String.format(queryFormatString, subsetQueryString, subsetResultSet.size());
+            // update the SELECT queries to be logged at the bottom of the error log file
+            state.getState().getLocalState().log(String.format("%s\n%s", firstQueryString, secondQueryString));
+            String assertionMessage = String.format("the content of the result sets mismatch!\n%s\n%s",
+                    firstQueryString, secondQueryString);
+            throw new AssertionError(assertionMessage);
+        }
+    }
+
+
     public static List<String> getCombinedResultSet(String firstQueryString, String secondQueryString,
             String thirdQueryString, List<String> combinedString, boolean asUnion, SQLGlobalState<?, ?> state,
             ExpectedErrors errors) throws SQLException {

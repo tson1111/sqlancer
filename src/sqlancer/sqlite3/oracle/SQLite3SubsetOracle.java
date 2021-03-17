@@ -1,7 +1,6 @@
 package sqlancer.sqlite3.oracle;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -22,9 +21,6 @@ import sqlancer.sqlite3.ast.SQLite3Expression.Join;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3ColumnName;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixText;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixUnaryOperation;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixUnaryOperation.PostfixUnaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.gen.SQLite3Common;
 import sqlancer.sqlite3.gen.SQLite3ExpressionGenerator;
@@ -148,10 +144,9 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         } else {
             List<String> originalResultSet =
                     ComparatorHelper.getResultSetFirstColumnAsString(originalQuery, errors, state);
-            List<String> combinedString = new ArrayList<>();
-            List<String> secondResultSet = ComparatorHelper.getTwoCombinedResultSetNoDuplicates(originalQuery,
-                    subsetQuery, combinedString, true, state, errors);
-            ComparatorHelper.assumeResultSetsAreEqual(originalResultSet, secondResultSet, originalQuery, combinedString,
+            List<String> subsetResultSet =
+                    ComparatorHelper.getResultSetFirstColumnAsString(subsetQuery, errors, state);
+            ComparatorHelper.assumeResultSetsAreSubset(originalResultSet, subsetResultSet, originalQuery, subsetQuery,
                     state);
         }
     }
