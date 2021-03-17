@@ -65,12 +65,12 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         SQLite3Select select = new SQLite3Select();
         select.setFromTables(tableRefs);
         select.setJoinClauses(joinStatements);
+        useAggregate = Randomly.getBoolean();
 
         getOriginalQuery(select, randomWhereCondition);
         getSubsetQuery(select, randomWhereCondition);
         getSupersetQuery(select, randomWhereCondition);
 
-        useAggregate = Randomly.getBoolean();
         checkSubsetQuery(subsetQueryString, originalQueryString, useAggregate);
         checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
