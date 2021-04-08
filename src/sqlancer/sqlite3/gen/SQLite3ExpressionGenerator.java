@@ -392,7 +392,7 @@ public class SQLite3ExpressionGenerator implements ExpressionGenerator<SQLite3Ex
         return new MatchOperation(left, right);
     }
 
-    private SQLite3Expression getRandomColumn() {
+    public SQLite3Expression getRandomColumn() {
         SQLite3Column c = Randomly.fromList(columns);
         return new SQLite3ColumnName(c, rw == null ? null : rw.getValues().get(c));
     }

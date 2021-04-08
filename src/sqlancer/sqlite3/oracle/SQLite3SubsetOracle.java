@@ -1,8 +1,8 @@
 package sqlancer.sqlite3.oracle;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import sqlancer.ComparatorHelper;
@@ -16,6 +16,7 @@ import sqlancer.sqlite3.SQLite3Errors;
 import sqlancer.sqlite3.SQLite3GlobalState;
 import sqlancer.sqlite3.SQLite3Visitor;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
+import sqlancer.sqlite3.ast.SQLite3Aggregate.SQLite3AggregateFunction;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation;
@@ -34,6 +35,8 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     private static final int NO_VALID_RESULT = -1;
     private final SQLite3Schema s;
     private SQLite3ExpressionGenerator gen;
+    private SQLite3AggregateFunction aggregateFunction;
+    private List<SQLite3Expression> aggregateColumn;
 
     public SQLite3SubsetOracle(SQLite3GlobalState globalState) {
         super(globalState);
@@ -61,7 +64,14 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         SQLite3Select select = new SQLite3Select();
         select.setFromTables(tableRefs);
         select.setJoinClauses(joinStatements);
+
         useAggregate = Randomly.getBoolean();
+        if (useAggregate) {
+            aggregateFunction = Randomly.fromOptions(SQLite3AggregateFunction.COUNT_ALL,
+                    SQLite3AggregateFunction.MAX, SQLite3AggregateFunction.MIN);
+            aggregateColumn = new ArrayList<>();
+            aggregateColumn.add(gen.getRandomColumn());
+        }
 
         getOriginalQuery(select, randomWhereCondition);
         getSubsetQuery(select, randomWhereCondition);
@@ -76,8 +86,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             select.setOrderByExpressions(gen.generateOrderBys());
         }
         if (useAggregate) {
-            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(Collections.emptyList(),
-                    SQLite3Aggregate.SQLite3AggregateFunction.COUNT_ALL)));
+            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(aggregateColumn, aggregateFunction)));
         } else {
             SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
             select.setFetchColumns(Arrays.asList(aggr));
@@ -94,8 +103,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             select.setOrderByExpressions(gen.generateOrderBys());
         }
         if (useAggregate) {
-            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(Collections.emptyList(),
-                    SQLite3Aggregate.SQLite3AggregateFunction.COUNT_ALL)));
+            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(aggregateColumn, aggregateFunction)));
         } else {
             SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
             select.setFetchColumns(Arrays.asList(aggr));
@@ -114,8 +122,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             select.setOrderByExpressions(gen.generateOrderBys());
         }
         if (useAggregate) {
-            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(Collections.emptyList(),
-                    SQLite3Aggregate.SQLite3AggregateFunction.COUNT_ALL)));
+            select.setFetchColumns(Arrays.asList(new SQLite3Aggregate(aggregateColumn, aggregateFunction)));
         } else {
             SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
             select.setFetchColumns(Arrays.asList(aggr));
@@ -137,9 +144,16 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             if (subsetCount == NO_VALID_RESULT || originCount == NO_VALID_RESULT) {
                 throw new IgnoreMeException();
             }
-            if (subsetCount > originCount) {
-                state.getState().getLocalState().log("SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
-                throw new AssertionError(subsetCount + " " + originCount);
+            if (aggregateFunction == SQLite3AggregateFunction.MIN) {
+                if (subsetCount < originCount && subsetCount != 0) { // TODO: update sqlite version?
+                    state.getState().getLocalState().log("--SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
+                    throw new AssertionError(subsetCount + " " + originCount);
+                }
+            } else {
+                if (subsetCount > originCount && subsetCount != 0) {
+                    state.getState().getLocalState().log("--SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
+                    throw new AssertionError(subsetCount + " " + originCount);
+                }
             }
         } else {
             List<String> originalResultSet =
