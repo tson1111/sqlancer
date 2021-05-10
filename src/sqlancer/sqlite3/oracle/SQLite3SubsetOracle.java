@@ -18,10 +18,27 @@ import sqlancer.sqlite3.SQLite3Visitor;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
 import sqlancer.sqlite3.ast.SQLite3Aggregate.SQLite3AggregateFunction;
 import sqlancer.sqlite3.ast.SQLite3Expression;
+import sqlancer.sqlite3.ast.SQLite3Expression.BetweenOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.BinaryComparisonOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.Cast;
+import sqlancer.sqlite3.ast.SQLite3Expression.CollateOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.Function;
+import sqlancer.sqlite3.ast.SQLite3Expression.InOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join;
+import sqlancer.sqlite3.ast.SQLite3Expression.MatchOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3ColumnName;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Distinct;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Exist;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3OrderingTerm;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixText;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixUnaryOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3TableReference;
+import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Text;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3ColumnName;
+import sqlancer.sqlite3.ast.SQLite3Expression.Subquery;
+import sqlancer.sqlite3.ast.SQLite3Expression.TypeLiteral;
+import sqlancer.sqlite3.ast.SQLite3Expression.Join;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.gen.SQLite3Common;
 import sqlancer.sqlite3.gen.SQLite3ExpressionGenerator;
@@ -80,6 +97,22 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         checkSubsetQuery(subsetQueryString, originalQueryString, useAggregate);
         checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
+
+    private void getPredicateSubsetMutation(SQLite3Expression expr) throws SQLException {
+        if (expr instanceof Sqlite3BinaryOperation) {
+            mutateOperator(expr.getOperator, );
+        }
+
+
+
+    }
+
+    private void mutateOperator(){
+        
+
+
+    }
+
 
     private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
         if (Randomly.getBoolean()) {
