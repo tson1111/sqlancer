@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 import sqlancer.ComparatorHelper;
 import sqlancer.IgnoreMeException;
@@ -20,6 +21,7 @@ import sqlancer.sqlite3.ast.SQLite3Aggregate.SQLite3AggregateFunction;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Expression.BetweenOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.BinaryComparisonOperation;
+import sqlancer.sqlite3.ast.SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator;
 import sqlancer.sqlite3.ast.SQLite3Expression.Cast;
 import sqlancer.sqlite3.ast.SQLite3Expression.CollateOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Function;
@@ -39,6 +41,9 @@ import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation.BinaryOpera
 import sqlancer.sqlite3.ast.SQLite3Expression.Subquery;
 import sqlancer.sqlite3.ast.SQLite3Expression.TypeLiteral;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join;
+import sqlancer.sqlite3.ast.SQLite3Expression.Join.JoinType;
+import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
+import sqlancer.sqlite3.ast.SQLite3UnaryOperation.UnaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.gen.SQLite3Common;
 import sqlancer.sqlite3.gen.SQLite3ExpressionGenerator;
@@ -54,6 +59,28 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     private SQLite3ExpressionGenerator gen;
     private SQLite3AggregateFunction aggregateFunction;
     private List<SQLite3Expression> aggregateColumn;
+    private enum MutationOperatorType {
+        SMALLEREQ_TO_EQUAL,
+        SMALLEREQ_TO_SMALLER,
+        GREATEREQ_TO_GREATER,
+        GREATEREQ_TO_EQ,
+        NOTEQ_TO_SMALLER,
+        NOTEQ_TO_GREATER,
+        ADD_AND,
+        IN_SHRINK,
+        LIKE_SUBSTITUTE,
+        SMALLEREQ_VALUE_CHANGE,
+        SMALLER_VALUE_CHANGE,
+        GREATEREQ_VALUE_CHANGE,
+        GREATER_VALUE_CHANGE,
+        JOIN_OUTER_INNER, // outer join -> inner join
+        DISTINCT,
+        GROUP_BY,
+        LIMIT,
+        INTERSECT
+    }
+    private int subsetConfig;
+
 
     public SQLite3SubsetOracle(SQLite3GlobalState globalState) {
         super(globalState);
@@ -71,6 +98,9 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
     @Override
     public void check() throws SQLException {
+        Random rand = new Random();
+        subsetConfig = rand.nextInt(1 << 18); // dependent to the number of MutationOperatorType
+
         SQLite3Tables randomTables = s.getRandomTableNonEmptyTables();
         List<SQLite3Column> columns = randomTables.getColumns();
         gen = new SQLite3ExpressionGenerator(state).setColumns(columns);
@@ -92,27 +122,59 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
         getOriginalQuery(select, randomWhereCondition);
         getSubsetQuery(select, randomWhereCondition);
-        getSupersetQuery(select, randomWhereCondition);
+        // getSupersetQuery(select, randomWhereCondition);
 
         checkSubsetQuery(subsetQueryString, originalQueryString, useAggregate);
-        checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
+        // checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
 
-    private void getPredicateSubsetMutation(SQLite3Expression expr) throws SQLException {
-        if (expr instanceof Sqlite3BinaryOperation) {
-            mutateOperator(expr.getOperator, );
+    private void checkMutationOperators(SQLite3Expression expr, List<Join> joins) {
+        for (Join joinStmt : joins) {
+            if (joinStmt.getType() == JoinType.OUTER) {
+                canMutateOperationList.add(MutationOperatorType.JOIN_OUTER_INNER);
+                break;
+            }
         }
 
 
 
+
+
     }
 
-    private void mutateOperator(){
+    private void mutateOperator(BinaryComparisonOperation expr, boolean negated, boolean subset) {
+        switch (expr.getOperator()) {
+            case SMALLER:
+            case SMALLER_EQUALS:
+            case GREATER:
+            case GREATER_EQUALS:
+            case EQUALS:
+            case NOT_EQUALS:
+            case LIKE:
+            default:
+                return ;
+
+        }
         
 
 
     }
 
+    private void getPredicateSubsetMutation(SQLite3Expression expr) throws SQLException {
+        if (expr instanceof SQLite3UnaryOperation) {
+            //
+        }
+        else if (expr instanceof BinaryComparisonOperation) {
+            mutateOperator((BinaryComparisonOperation)expr, true, true);
+        } else if (expr instanceof InOperation) {
+            //
+        } else if (expr instanceof BetweenOperation) {
+            //
+        }
+
+
+
+    }
 
     private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
         if (Randomly.getBoolean()) {
@@ -150,6 +212,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         }
     }
 
+    /*
     private void getSupersetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
         if (Randomly.getBoolean()) {
             select.setOrderByExpressions(gen.generateOrderBys());
@@ -168,6 +231,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             logger.writeCurrent(supersetQueryString);
         }
     }
+    */
 
     private void checkSubsetQuery(String subsetQuery, String originalQuery, boolean useAggregate) throws SQLException {
         if (useAggregate) {
