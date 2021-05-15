@@ -45,6 +45,7 @@ import sqlancer.sqlite3.ast.SQLite3Expression.Join.JoinType;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
 import sqlancer.sqlite3.ast.SQLite3UnaryOperation.UnaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Select;
+import sqlancer.sqlite3.ast.SQLite3Select.SelectType;
 import sqlancer.sqlite3.gen.SQLite3Common;
 import sqlancer.sqlite3.gen.SQLite3ExpressionGenerator;
 import sqlancer.sqlite3.schema.SQLite3Schema;
@@ -60,19 +61,17 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     private SQLite3AggregateFunction aggregateFunction;
     private List<SQLite3Expression> aggregateColumn;
     private enum MutationOperatorType {
-        SMALLEREQ_TO_EQUAL,
-        SMALLEREQ_TO_SMALLER,
-        GREATEREQ_TO_GREATER,
-        GREATEREQ_TO_EQ,
-        NOTEQ_TO_SMALLER,
-        NOTEQ_TO_GREATER,
+        SMALLEREQ_SUBSTITUE, // <= to < or ==
+        GREATEREQ_SUBSTITUE, // >= to > or ==
+        NOTEQ_SUBSTITUE, // != (<>) to < or >
         ADD_AND,
         IN_SHRINK,
-        LIKE_SUBSTITUTE,
+        LIKE_SUBSTITUTE, //
         SMALLEREQ_VALUE_CHANGE,
         SMALLER_VALUE_CHANGE,
         GREATEREQ_VALUE_CHANGE,
         GREATER_VALUE_CHANGE,
+        // -------------------------------------------
         JOIN_OUTER_INNER, // outer join -> inner join
         DISTINCT,
         GROUP_BY,
@@ -98,8 +97,9 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
     @Override
     public void check() throws SQLException {
+        // set subset combination strategy
         Random rand = new Random();
-        subsetConfig = rand.nextInt(1 << 18); // dependent to the number of MutationOperatorType
+        subsetConfig = rand.nextInt(1 << 15); // dependent to the number of MutationOperatorType
 
         SQLite3Tables randomTables = s.getRandomTableNonEmptyTables();
         List<SQLite3Column> columns = randomTables.getColumns();
@@ -110,7 +110,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         List<SQLite3Expression> tableRefs = SQLite3Common.getTableRefs(tables, s);
         SQLite3Select select = new SQLite3Select();
         select.setFromTables(tableRefs);
-        select.setJoinClauses(joinStatements);
+
 
         useAggregate = Randomly.getBoolean();
         if (useAggregate) {
@@ -120,60 +120,80 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             aggregateColumn.add(gen.getRandomColumn());
         }
 
-        getOriginalQuery(select, randomWhereCondition);
-        getSubsetQuery(select, randomWhereCondition);
+        getOriginalQuery(select, randomWhereCondition, joinStatements);
+        getSubsetQuery(select, randomWhereCondition, joinStatements);
         // getSupersetQuery(select, randomWhereCondition);
 
         checkSubsetQuery(subsetQueryString, originalQueryString, useAggregate);
         // checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
 
-    private void checkMutationOperators(SQLite3Expression expr, List<Join> joins) {
-        for (Join joinStmt : joins) {
-            if (joinStmt.getType() == JoinType.OUTER) {
-                canMutateOperationList.add(MutationOperatorType.JOIN_OUTER_INNER);
-                break;
+
+    private void mutateBinaryComparisonOperation(BinaryComparisonOperation expr, boolean negated) {
+        if (negated) {
+            // build superset
+            switch (expr.getOperator()) {
+                case SMALLER:
+                case SMALLER_EQUALS:
+                case GREATER:
+                case GREATER_EQUALS:
+                case EQUALS:
+                case NOT_EQUALS:
+                case LIKE:
+                default:
+                    return ;
+            }
+        } else {
+            // build subset
+            switch (expr.getOperator()) {
+                case SMALLER:
+                case SMALLER_EQUALS:
+                case GREATER:
+                case GREATER_EQUALS:
+                case EQUALS:
+                case NOT_EQUALS:
+                case LIKE:
+                default:
+                    return ;
             }
         }
 
-
-
-
-
-    }
-
-    private void mutateOperator(BinaryComparisonOperation expr, boolean negated, boolean subset) {
-        switch (expr.getOperator()) {
-            case SMALLER:
-            case SMALLER_EQUALS:
-            case GREATER:
-            case GREATER_EQUALS:
-            case EQUALS:
-            case NOT_EQUALS:
-            case LIKE:
-            default:
-                return ;
-
-        }
         
 
 
     }
 
-    private void getPredicateSubsetMutation(SQLite3Expression expr) throws SQLException {
+    private void mutatePredicate(SQLite3Expression expr, boolean negated) throws SQLException {
         if (expr instanceof SQLite3UnaryOperation) {
-            //
+            SQLite3UnaryOperation unaryExpr = (SQLite3UnaryOperation)expr;
+            if unaryExpr.getOperation() == UnaryOperator.NOT {
+                mutatePredicate(unaryExpr.getExpression(), !negated);
+            }
         }
         else if (expr instanceof BinaryComparisonOperation) {
-            mutateOperator((BinaryComparisonOperation)expr, true, true);
-        } else if (expr instanceof InOperation) {
-            //
-        } else if (expr instanceof BetweenOperation) {
-            //
+            mutateBinaryComparisonOperation((BinaryComparisonOperation)expr, negated);
+            mutate
+        } else if (expr instanceof InOperation && checkCanMutate(IN_SHRINK)) {
+            InOperation inExpr = (InOperation)expr;
+            List<SQLite3Expression> rightExprList = inExpr.getRightExpressionList();
+            if (inExpr.getRightSelect.isEmpty()) {
+                if (negated) {
+                    // NOT IN
+                    int N = Randomly.getInteger()
+                    while (N--) {
+                        rightExprList.add(gen.generateExpression);
+                    }
+                } else {
+                    // IN
+                    int N = Randomly.getInteger()
+                    while (N-- && !rightExprList.isEmpty()) {
+                        rightExprList.remove(rightExprList.size() - 1);
+                    }
+                }
+                mutatePredicate(inExpr.getLeft());
+                for ()
+            }
         }
-
-
-
     }
 
     private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
@@ -187,13 +207,19 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             select.setFetchColumns(Arrays.asList(aggr));
         }
         select.setWhereClause(randomWhereCondition);
+        select.setJoinClauses(joinStatements);
         originalQueryString = SQLite3Visitor.asString(select);
         if (options.logEachSelect()) {
             logger.writeCurrent(originalQueryString);
         }
     }
 
-    private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
+    private boolean checkCanMutate(MutationOperatorType t) {
+        return (1 << (t.ordinal())) & subsetConfig != 0;
+    }
+
+    private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition,
+                    List<SQLite3Expression> tableRefs, List<Join> joins) throws SQLException {
         if (Randomly.getBoolean()) {
             select.setOrderByExpressions(gen.generateOrderBys());
         }
@@ -203,10 +229,52 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             SQLite3ColumnName aggr = new SQLite3ColumnName(SQLite3Column.createDummy("*"), null);
             select.setFetchColumns(Arrays.asList(aggr));
         }
-        SQLite3Expression andExpression = new Sqlite3BinaryOperation(randomWhereCondition,
-                gen.generateExpression(), BinaryOperator.AND);
-        select.setWhereClause(andExpression);
+
+
+        // mutate JOIN
+        if (checkCanMutate(MutationOperatorType.JOIN_OUTER_INNER)) {
+            for (Join joinStmt : joins) {
+                if (joinStmt.getType() == JoinType.OUTER) {
+                    joinStmt.setType(JoinType.INNER);
+                    break;
+                }
+            }
+        }
+        select.setJoinClauses(joinStatements);
+
+        // mutate DISTINCT
+        if (checkCanMutate(MutationOperatorType.DISTINCT)) {
+            select.setSelectType(SelectType.DINSTINCT);
+        }
+        // mutate GROUP_BY
+        if (checkCanMutate(MutationOperatorType.GROUP_BY)) {
+            // TODO mutate group_by
+        }
+
+        // mutate LIMIT
+        if (checkCanMutate(MutationOperatorType.LIMIT)) {
+            select.setLimitClause(SQLite3IntConstant(Randomly.getInteger()));
+        }
+
+        // mutate predicate
+        mutatePredicate(randomWhereCondition, false);
+
+        // mutate ADD_AND
+        if (checkCanMutate(ADD_AND)) {
+            SQLite3Expression andExpression = new Sqlite3BinaryOperation(randomWhereCondition,
+                        gen.generateExpression(), BinaryOperator.AND);
+            select.setWhereClause(andExpression);
+        } else {
+            select.setWhereClause(randomWhereCondition);
+        }
+
         subsetQueryString = SQLite3Visitor.asString(select);
+
+        if (checkCanMutate(MutationOperatorType.INTERSECT)) {
+            SQLite3Expression randomWhereCondition2 = gen.generateExpression();
+            select.setWhereClause(randomWhereCondition2);
+            subsetQueryString += " INTERSECT " + SQLite3Visitor.asString(select);
+        }
         if (options.logEachSelect()) {
             logger.writeCurrent(subsetQueryString);
         }
