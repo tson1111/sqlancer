@@ -1,0 +1,118 @@
+--java.lang.AssertionError: 1922856525 0
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:234)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:109)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/19 01:09:35
+-- Database: database11
+-- Database version: 3.34.0
+-- seed value: 1621357771655
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+CREATE VIRTUAL TABLE vt0 USING fts4(c0 UNINDEXED, c1 UNINDEXED, c2 UNINDEXED, languageid="lid");
+CREATE TABLE t1 (c0 INTEGER , c1 INT );
+PRAGMA cache_size;
+ANALYZE sqlite_master;
+PRAGMA main.cache_size;
+PRAGMA temp.defer_foreign_keys = false;
+INSERT INTO vt0(vt0, rank) VALUES('merge', 1654091823);
+;
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '59412');
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 4);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '42304');
+INSERT INTO vt0(vt0) VALUES('merge=-1891682367,13');
+;
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '49748');
+INSERT INTO vt0(vt0) VALUES('optimize');
+REINDEX;
+ROLLBACK TRANSACTION;
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+INSERT OR IGNORE INTO vt0(lid, c1, c2) VALUES ('%S[	6	㒂ff', 'wora', 0.5765511609537718), (-938789758, '-938789758', x'');
+PRAGMA checkpoint_fullfsync = false;
+INSERT OR IGNORE INTO vt0(c1, lid, c2) VALUES ('%S[	6	㒂ff', 'm1<Gtk', 0X56aa20ff);
+REINDEX BINARY;
+ROLLBACK TRANSACTION;
+PRAGMA main.soft_heap_limit = 0;
+BEGIN IMMEDIATE TRANSACTION;
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+BEGIN IMMEDIATE TRANSACTION;
+ANALYZE t1;
+INSERT OR IGNORE INTO t1 VALUES (0.11851432196579836, '1453990143'), (NULL, '-208665743');
+INSERT OR ROLLBACK INTO t1(c1) VALUES (''), (0.9849697064163125);
+ROLLBACK TRANSACTION;
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 3);
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+PRAGMA checkpoint_fullfsync = false;
+ROLLBACK TRANSACTION;
+INSERT OR FAIL INTO t1(c1, c0) VALUES (0.19825909010793974, '-1064208416');
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+INSERT INTO vt0(vt0, rank) VALUES('crisismerge', 1708896965);
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 10);
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 10);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '6081');
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+INSERT OR IGNORE INTO vt0(c1, lid, c0, c2) VALUES (NULL, NULL, NULL, NULL), (x'72', '-1085033156', 0.9849697064163125, 0.5791516613055935), ((((-2.08665743E8 IN (0.11851432196579836, '%S[	6	㒂ff')))<(767748392 COLLATE NOCASE)), 0x16dfa69a, 0.1279980208142556, (((((NULL)AND(',')))OR(0x56aa20ff)) IN ()));
+INSERT OR FAIL INTO t1(c1) VALUES (x'0319ab55'), (NULL), (x'9182');
+BEGIN DEFERRED TRANSACTION;
+INSERT OR IGNORE INTO vt0(c0, lid, c2, c1) VALUES (x'6d', -860569680, NULL, NULL);
+CREATE TEMP VIEW v0(c0) AS SELECT ALL AVG(((vt0.lid) BETWEEN (vt0.c1) AND (vt0.c0))) OVER ( ROWS ((((((((((CAST(vt0.c1 AS NUMERIC))OR(t1.c0)))AND((('7F3矠0')&(vt0.lid)))))OR(IFNULL(DISTINCT t1.c0, t1.c1))))AND(x'' COLLATE RTRIM)))OR(CAST(t1.c0 AS BLOB))) PRECEDING) FROM vt0;
+PRAGMA busy_timeout;
+ROLLBACK TRANSACTION;
+ANALYZE main;
+PRAGMA temp.short_column_names;
+INSERT OR FAIL INTO vt0(c1, c0, lid, c2) VALUES ('0.5765511609537718', x'58da37', NULL, x'74');
+INSERT OR ROLLBACK INTO t1(c1) VALUES (0Xffffffffccb4bfb0), (NULL), (x'81');
+PRAGMA main.short_column_names;
+INSERT OR IGNORE INTO sqlite_stat1 VALUES('vt0', 'sqlite_autoindex_vt0_segdir_1', '2 383755930 sz=1922856525 noskipscan');
+PRAGMA temp.busy_timeout;
+INSERT OR IGNORE INTO vt0(c0, lid, c1) VALUES (x'47', '', -1928117674);
+PRAGMA main.defer_foreign_keys = false;
+INSERT OR IGNORE INTO vt0(c0) VALUES (x'e6'), (NULL);
+INSERT OR ABORT INTO t1(c1, c0) VALUES (0.11851432196579836, NULL), ('0.5791516613055935', NULL), ('y', 0.1279980208142556);
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO vt0(c2, lid) VALUES (x'e3', x'1d');
+INSERT OR FAIL INTO t1 VALUES (' ', 1922856525);
+ANALYZE;
+PRAGMA temp.recursive_triggers = true;
+INSERT OR FAIL INTO t1(c1, c0) VALUES (NULL, -981114213), (0.5644616308110597, 0.8982271372328591);
+INSERT INTO vt0(vt0) VALUES('automerge=1');
+INSERT OR ABORT INTO vt0(lid, c2, c0) VALUES (0.1279980208142556, 'wora', 0.2666932378192628);
+PRAGMA temp.cell_size_check;
+PRAGMA temp.journal_size_limit;
+REINDEX;
+DELETE FROM sqlite_stat1;
+CREATE UNIQUE INDEX IF NOT EXISTS i77 ON t1(x'',x'8982' COLLATE RTRIM DESC);
+CREATE INDEX i65 ON t1(CASE ((((((c0)OR(-1.891682367E9)))OR(c1)))OR(c1))  WHEN ((c1) ISNULL) THEN TYPEOF(x'ea') WHEN (((c0, c1)) BETWEEN ((c1, c0)) AND ((c1, c1))) THEN ((c1)<<(c0)) WHEN x'd6fde7' COLLATE RTRIM THEN CASE WHEN c1 THEN c1 ELSE c1 END ELSE CASE c0  WHEN 0.4786974358234275 THEN c1 END END COLLATE RTRIM,((((c1)!=(c0))) IS TRUE) COLLATE NOCASE) WHERE (((c0)) BETWEEN ((((c0)|(c0)))) AND ((CASE WHEN c1 THEN c1 END)));
+INSERT INTO vt0(vt0, rank) VALUES('crisismerge', 1483914412);
+INSERT INTO vt0(vt0) VALUES('automerge=6');
+PRAGMA cell_size_check;
+INSERT OR IGNORE INTO t1(c0) VALUES (0.3997793162546692), (0.25082130696014815);
+PRAGMA main.secure_delete = FAST;
+PRAGMA application_id = 4512758646852539963;
+PRAGMA temp.cell_size_check;
+END;
+PRAGMA secure_delete;
+REINDEX i65;
+ROLLBACK TRANSACTION;
+REINDEX i65;
+BEGIN EXCLUSIVE TRANSACTION;
+CREATE INDEX IF NOT EXISTS i90 ON t1((~ (CAST(c0 AS REAL))) ASC,CAST((x'51' IN (c0)) AS INTEGER) ASC) WHERE ((c1 IN (c1, c0)) IN (((((((c0)OR(c1)))AND(c0)))OR(c0))));
+INSERT OR ABORT INTO vt0(c2, c0) VALUES (0xfffffffff699c751, '''//');
+CREATE UNIQUE INDEX i8 ON t1(CAST((((c0, c1))>=((c0, c1))) AS NUMERIC) COLLATE BINARY DESC,(((((((('.癍')AND(c1)))AND(c1)))AND(c1)))AND(c1)) COLLATE BINARY COLLATE RTRIM);
+CREATE UNIQUE INDEX i30 ON t1((((c1) IS TRUE) IN ()),(((c1) BETWEEN (c0) AND (NULL)) IN ()));
+CREATE INDEX i7 ON t1(((0.47093642199023156) BETWEEN (CAST(0.2666932378192628 AS BLOB)) AND (((c0) NOT BETWEEN (c0) AND (c0)))) DESC,(((('')*(c0)))AND(c1 COLLATE NOCASE)));
+INSERT OR ROLLBACK INTO vt0(c1, lid, c2) VALUES ('[', NULL, x'6f'), (0Xfffffffff699c751, 0.5644616308110597, 1922856525), ('1453990143', 0.8982271372328591, 'A㇄');
+END;
+ROLLBACK TRANSACTION;
+--SUBSET BUG!
+SELECT ALL MAX(t1.c1) FROM t1 WHERE (((((TRIM(DISTINCT t1.c0)) NOTNULL))AND((((t1.c0) ISNULL) IN (((((((t1.c0)OR(t1.c1)))AND(t1.c0)))AND(t1.c0)), '1074298858'))))) ORDER BY t1.c1;
+SELECT MAX(t1.c1) FROM t1 WHERE (((TRIM(DISTINCT t1.c0)) NOTNULL)) ORDER BY t1.c1;

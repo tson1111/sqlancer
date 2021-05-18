@@ -1,0 +1,118 @@
+--java.lang.AssertionError: 1839189666 0
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:234)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:109)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/19 01:09:32
+-- Database: database0
+-- Database version: 3.34.0
+-- seed value: 1621357771643
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+CREATE VIRTUAL TABLE vt0 USING fts4(c0 UNINDEXED, matchinfo=fts3);
+CREATE VIRTUAL TABLE rt1 USING rtree(c0, c1, c2, c3, +c4 INT , +c5 TEXT , +c6 TEXT );
+CREATE VIRTUAL TABLE vt2 USING fts5(c0 UNINDEXED, c1, tokenize = "unicode61 tokenchars '%d뼃yp'");
+ANALYZE;
+INSERT INTO vt2(vt2, rank) VALUES('usermerge', 13);
+COMMIT;
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '355');
+INSERT INTO vt2(vt2, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+ROLLBACK TRANSACTION;
+END TRANSACTION;
+PRAGMA checkpoint_fullfsync = true;
+UPDATE OR FAIL vt2 SET (c0)=(NULL);
+INSERT INTO vt0(vt0) VALUES('optimize');
+ANALYZE;
+INSERT INTO vt0(vt0) VALUES('merge=-1006256381,7');
+;
+INSERT INTO vt2(vt2) VALUES('automerge=11');
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 8);
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt2(vt2) VALUES('rebuild');
+REINDEX  vt2;
+CREATE TEMP VIEW v0(c0, c1, c2, c3) AS SELECT DISTINCT vt2.c1, COUNT((((vt0.c0, vt2.c1, vt2.c1))<((vt2.c0, vt2.c0, vt2.c1)))) OVER (), 0.12893410339563705, IFNULL(DISTINCT ((vt2.c1)<=(vt0.c0)), CAST(vt2.c1 AS BLOB)) FROM vt2, vt0 WHERE ((((CAST(0.12893410339563705 AS NUMERIC)))>(((~ (0Xffffffffc405bf03))))));
+INSERT INTO vt0(vt0, rank) VALUES('automerge', 3);
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+INSERT INTO vt2(vt2) VALUES('optimize');
+INSERT INTO vt0(vt0) VALUES('optimize');
+UPDATE OR IGNORE vt0 SET (c0)=(x'');
+INSERT OR REPLACE INTO vt0 VALUES (x'134b9a'), (0.12893410339563705), (-1.006256381E9), (NULL);
+BEGIN  TRANSACTION;
+COMMIT TRANSACTION;
+INSERT OR IGNORE INTO vt2(c0) VALUES ('D5L'), (0Xffffffffc405bf03), (x'f7');
+ANALYZE main;
+BEGIN IMMEDIATE TRANSACTION;
+INSERT OR FAIL INTO vt0 VALUES (NULL), (x'2e'), (NULL);
+END TRANSACTION;
+BEGIN IMMEDIATE TRANSACTION;
+INSERT INTO vt0(vt0, rank) VALUES('usermerge', 5);
+INSERT INTO vt2(vt2, rank) VALUES('pgsz', '40831');
+ANALYZE v0;
+INSERT INTO vt0(vt0) VALUES('merge=-1935470654,6');
+;
+INSERT INTO vt2(vt2) VALUES('merge=-1935470654,7');
+;
+INSERT INTO vt0(vt0) VALUES('optimize');
+UPDATE OR IGNORE vt2 SET c1 = '1839189666', c1 = -1.006256381E9, c1 = x'57';
+BEGIN IMMEDIATE TRANSACTION;
+PRAGMA recursive_triggers = false;
+PRAGMA main.incremental_vacuum;
+BEGIN IMMEDIATE TRANSACTION;
+PRAGMA temp.cell_size_check;
+PRAGMA stats;
+INSERT OR ROLLBACK INTO vt0 VALUES ('');
+PRAGMA automatic_index = true;
+INSERT INTO vt0(vt0) VALUES('rebuild');
+BEGIN  TRANSACTION;
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO vt2(c1, c0) VALUES ('1839189666', NULL), (NULL, '708305761');
+COMMIT;
+BEGIN EXCLUSIVE TRANSACTION;
+ROLLBACK TRANSACTION;
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '14375');
+INSERT INTO vt0(vt0) VALUES('rebuild');
+REINDEX  vt2;
+INSERT OR FAIL INTO vt0(c0) VALUES (x'd2');
+INSERT OR IGNORE INTO vt2(c1, c0) VALUES (-1.006256381E9, x'fe531e'), (-941041463, NULL), ('', '708305761');
+INSERT INTO vt2(vt2, rank) VALUES('crisismerge', 393297413);
+PRAGMA cache_size = 4474737307793778597;
+INSERT INTO vt0(vt0) VALUES('optimize');
+BEGIN  TRANSACTION;
+ANALYZE;
+ROLLBACK TRANSACTION;
+UPDATE OR IGNORE vt0 SET (c0)=(NULL) WHERE ((((vt0.c0) NOT BETWEEN (vt0.c0) AND (vt0.c0)))LIKE(CAST(vt0.c0 AS TEXT)));
+INSERT INTO vt2(vt2, rank) VALUES('merge', 477587929);
+;
+INSERT OR IGNORE INTO vt2(c0) VALUES (NULL), (NULL), ('');
+INSERT INTO vt2(vt2, rank) VALUES('pgsz', '31298');
+COMMIT TRANSACTION;
+INSERT OR IGNORE INTO vt2(c0) VALUES (x'');
+INSERT INTO vt2(vt2, rank) VALUES('usermerge', 8);
+INSERT OR ABORT INTO vt2 VALUES (x'e2751a', '&E&'), (x'77', x''), (0Xff51a7e, NULL);
+ROLLBACK TRANSACTION;
+INSERT INTO vt2(vt2) VALUES('merge=1291339797,2');
+;
+INSERT INTO vt0(vt0, rank) VALUES('crisismerge', 937903423);
+INSERT INTO vt0(vt0, rank) VALUES('pgsz', '32329');
+INSERT INTO vt0(vt0) VALUES('integrity-check');
+ANALYZE;
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO vt0(c0) VALUES ('i'), (NULL), (0.8371558124005088);
+INSERT INTO vt0(vt0, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt2(vt2, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt2(vt2, rank) VALUES('pgsz', '29508');
+INSERT OR IGNORE INTO vt2(c1, c0) VALUES (x'71c435', x'70f5d56d'), ('1702837040', NULL);
+ROLLBACK TRANSACTION;
+ANALYZE v0;
+COMMIT TRANSACTION;
+ROLLBACK TRANSACTION;
+--SUBSET BUG!
+SELECT DISTINCT MAX(vt2.c1) FROM vt2 WHERE (((0.30936303784737795)AND(CASE 1.247623579E9  WHEN ((vt2.c0) NOT NULL) THEN vt2.c0 WHEN ((vt2.c0)GLOB(vt2.c0)) THEN ((vt2.c0)IS(vt2.c1)) WHEN ((vt2.c0)AND(vt2.c1)) THEN (NOT (vt2.c0)) WHEN ((((vt2.c1)AND(vt2.c0)))OR(vt2.c0)) THEN ((vt2.c1) NOT BETWEEN (vt2.c0) AND (vt2.c1)) ELSE vt2.c1 COLLATE NOCASE END))) ORDER BY ((CASE WHEN vt2.c0 THEN vt2.c1 WHEN vt2.c1 THEN vt2.c0 ELSE vt2.c0 END) ISNULL) ASC LIMIT 1;
+SELECT MAX(vt2.c1) FROM vt2 WHERE (0.30936303784737795);

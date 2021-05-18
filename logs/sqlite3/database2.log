@@ -1,0 +1,149 @@
+--java.lang.AssertionError: the size of the result sets mismatch (0 and 1)!
+---- SELECT * FROM vt1 WHERE (((CAST(vt1.c0 AS REAL)) BETWEEN (((vt1.c1)>=(vt1.c1))) AND (((vt1.c0) IS TRUE)))) ORDER BY ((((((vt1.c1)) BETWEEN ((vt1.c1)) AND ((vt1.c1)))))<(((vt1.c1 IN (vt1.c1, vt1.c1))))) ASC  NULLS LAST;
+---- cardinality: 0
+---- SELECT * FROM vt1 WHERE (((CAST(vt1.c0 AS REAL)) BETWEEN (((vt1.c1)>(vt1.c1))) AND (((vt1.c0) IS TRUE)))) ORDER BY ((((((vt1.c1)) BETWEEN ((vt1.c1)) AND ((vt1.c1)))))<(((vt1.c1 IN (vt1.c1, vt1.c1))))) ASC  NULLS LAST LIMIT 1;
+---- cardinality: 1
+--	at sqlancer.ComparatorHelper.assumeResultSetsAreSubset(ComparatorHelper.java:126)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:242)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:109)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/19 01:09:35
+-- Database: database2
+-- Database version: 3.34.0
+-- seed value: 1621357771646
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA case_sensitive_like=ON;
+PRAGMA encoding = 'UTF-16le';
+CREATE VIRTUAL TABLE rt0 USING rtree_i32(c0, c1, c2, c3);
+CREATE VIRTUAL TABLE vt1 USING fts4(c0, c1 UNINDEXED, matchinfo=fts3);
+INSERT OR ROLLBACK INTO vt1(c0, c1) VALUES (1385967592, x'16c0'), (238619551, x'');
+INSERT OR ABORT INTO vt1 VALUES ('-0.0', '3ட?|oqS'), (0.5814689809106545, '-2138777447'), (x'2740', 0x72f5901c), (0Xffffffff8084d899, x'');
+UPDATE OR IGNORE vt1 SET c0 = NULL, c0 = '5' WHERE (((CAST(vt1.c0 AS TEXT)))<=((((vt1.c0)|(vt1.c0)))));
+INSERT OR IGNORE INTO vt1(c1) VALUES (0.6606996312010245);
+ANALYZE vt1;
+UPDATE vt1 SET (c0, c0)=(0.3650001206372754, 0xffffffff8084d899);
+INSERT INTO vt1(vt1, rank) VALUES('usermerge', 9);
+INSERT INTO vt1(vt1) VALUES('integrity-check');
+BEGIN IMMEDIATE TRANSACTION;
+UPDATE OR IGNORE vt1 SET (c1, c0)=(1385967592, 'w ');
+BEGIN  TRANSACTION;
+ROLLBACK TRANSACTION;
+ROLLBACK TRANSACTION;
+INSERT OR ROLLBACK INTO vt1(c0) VALUES (0.3075655420463639), (NULL), ('238619551'), ('2092562707'), (NULL), (2.38619551E8);
+DELETE FROM sqlite_stat1 WHERE ((('238619551')) BETWEEN ((((-2.138777447E9)-('')))) AND ((DATE(NULL, 0.9272262601728333, '-161006739'))));
+ANALYZE vt1;
+ROLLBACK TRANSACTION;
+INSERT OR FAIL INTO vt1(c0) VALUES (0.21967582350651405), (x''), (x'8e684a09'), ('-2138777447');
+ANALYZE temp;
+UPDATE OR IGNORE vt1 SET (c0, c1, c0)=(-161006739, '', 0.9723625884208765);
+UPDATE vt1 SET c1 = '+i48N,i', c1 = -2.138777447E9;
+INSERT INTO vt1(vt1) VALUES('rebuild');
+INSERT OR FAIL INTO vt1(c1) VALUES (x''), (593919159), (NULL);
+INSERT INTO vt1(vt1) VALUES('optimize');
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '65470');
+INSERT INTO vt1(vt1, rank) VALUES('usermerge', 2);
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '533');
+INSERT INTO vt1(vt1, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt1(vt1, rank) VALUES('rank', 'bm25(10.0, 5.0)');
+INSERT INTO vt1(vt1, rank) VALUES('crisismerge', 1914615601);
+INSERT INTO vt1(vt1, rank) VALUES('automerge', 9);
+INSERT INTO vt1(vt1, rank) VALUES('automerge', 3);
+INSERT INTO vt1(vt1) VALUES('integrity-check');
+UPDATE OR IGNORE vt1 SET (c0, c1)=(x'', '2092562707');
+INSERT OR FAIL INTO vt1(c0) VALUES (0.9986592295565859), (x''), (0.2505113465405977), (1059809263);
+ROLLBACK TRANSACTION;
+ANALYZE;
+ROLLBACK TRANSACTION;
+COMMIT;
+INSERT OR IGNORE INTO vt1 VALUES (0x23667cb7, x'1ad251');
+ROLLBACK TRANSACTION;
+UPDATE vt1 SET c1 = 'FALSE' WHERE ((((0.17021027740818329)<<(vt1.c0)))||((('1986150300') IS FALSE)));
+INSERT OR IGNORE INTO vt1(c0, c1) VALUES (0x5567c50c, 'LD');
+UPDATE OR ABORT vt1 SET c0 = 0.33935815357280286, c0 = x'd4' WHERE vt1.c1;
+ANALYZE sqlite_master;
+ROLLBACK TRANSACTION;
+END;
+END;
+INSERT INTO vt1(vt1) VALUES('integrity-check');
+INSERT OR IGNORE INTO vt1(c1) VALUES (NULL), (0X5567c50c), (0.03307547456638493);
+INSERT INTO vt1(vt1) VALUES('rebuild');
+INSERT OR REPLACE INTO vt1 VALUES (0.4932637608742654, NULL), (0x23667cb7, NULL);
+UPDATE OR ABORT vt1 SET (c0, c0, c1, c0)=(x'0bb3', '-715631831', x'', NULL) WHERE ((TRIM(DISTINCT vt1.c1)) NOT NULL);
+UPDATE OR IGNORE vt1 SET (c1, c0)=('0.03307547456638493', x'f0');
+UPDATE vt1 SET c0 = -715631831, c0 = 'u7aeMN' WHERE ((NULL) NOT NULL);
+ANALYZE;
+BEGIN IMMEDIATE TRANSACTION;
+INSERT OR REPLACE INTO vt1(c0) VALUES (x'0b');
+INSERT OR IGNORE INTO vt1(c1, c0) VALUES (x'81', x'3a22'), (NULL, 0.7900745124283236), ('1958361535', 0.891432133301884);
+UPDATE OR ABORT vt1 SET c1 = '0.9723625884208765';
+UPDATE OR IGNORE vt1 SET (c1, c0)=('3ட?|oqS', ')8wIcX㉹|') WHERE LOWER((((vt1.c1)) BETWEEN ((vt1.c1)) AND ((vt1.c0))));
+INSERT INTO vt1(vt1) VALUES('optimize');
+UPDATE OR IGNORE vt1 SET (c1, c1)=(x'5d', '1528361913') WHERE ((- (vt1.c1)) IN ());
+PRAGMA wal_checkpoint(RESTART);
+PRAGMA busy_timeout = 0;
+INSERT OR REPLACE INTO vt1 VALUES (NULL, NULL), ('&w&HWw', x''), ('w ', 0.03307547456638493), (NULL, '174288084');
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '17545');
+INSERT INTO vt1(vt1) VALUES('optimize');
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '7119');
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '52538');
+INSERT INTO vt1(vt1) VALUES('integrity-check');
+UPDATE OR IGNORE vt1 SET c0 = '!BU䣸', c0 = NULL, c0 = '-1445673354' WHERE IFNULL(DISTINCT (NOT (vt1.c1)), ((vt1.c1) ISNULL));
+CREATE VIEW v0(c0, c1, c2, c3) AS SELECT DISTINCT (CAST(vt1.c0 AS TEXT) IN (1011126749 COLLATE NOCASE, vt1.c1 COLLATE RTRIM, (vt1.c1 IN (vt1.c1, x'2c9d')))), (((STRFTIME(vt1.c0, vt1.c0, vt1.c0), ((vt1.c0) NOTNULL)))>=(((vt1.c0 IN (vt1.c0)), MIN(vt1.c0)))), CASE ((((vt1.c1)OR(vt1.c0)))AND(vt1.c0))  WHEN ((vt1.c1)AND(vt1.c0)) THEN CASE vt1.c1  WHEN vt1.c0 THEN vt1.c0 WHEN vt1.c0 THEN '88Y' ELSE x'' END ELSE x'61' COLLATE BINARY END, NULL FROM vt1 WHERE ((((((0.7453215020985186)<<(x'')), (- ('238619551')), (- (NULL)), (0.24620704386400816 IN (')_dZkB'))))<=((((1366639140)*(x'3478')), ((0.9889742458417861) BETWEEN (NULL) AND ('-715631831')), ((('-1221834504'))>(('-1445673354'))), CAST('35782336' AS REAL)))));
+UPDATE vt1 SET (c1, c0)=(x'd2d3', '1203381341') WHERE ((NULL)||(CASE WHEN vt1.c0 THEN vt1.c1 WHEN vt1.c1 THEN vt1.c1 WHEN vt1.c0 THEN vt1.c1 WHEN vt1.c1 THEN vt1.c0 END));
+INSERT OR ABORT INTO vt1(c0, c1) VALUES (NULL, 0Xffffffffebadb484), (0.16921025049627914, 0.7026182176709729);
+INSERT OR IGNORE INTO vt1 VALUES (NULL, NULL), (x'932dbd', '1366639140'), (x'c149', 0x309f4865);
+UPDATE OR IGNORE vt1 SET (c1, c0)=(1.958361535E9, '%J') WHERE (NOT (((vt1.c1) NOT NULL)));
+INSERT OR FAIL INTO vt1 VALUES ('', x'2b'), (0.8707837247575839, x'');
+UPDATE vt1 SET (c1)=(0.09001413125325375) WHERE ((vt1.c1) NOT NULL);
+BEGIN  TRANSACTION;
+INSERT INTO vt1(vt1) VALUES('automerge=8');
+ANALYZE;
+UPDATE OR IGNORE vt1 SET c1 = 0xffffffff8084d899, c1 = NULL, c1 = '216012779';
+VACUUM temp;
+UPDATE vt1 SET (c0)=(x'ca');
+INSERT OR IGNORE INTO vt1(c0) VALUES (x'');
+PRAGMA main.integrity_check;
+ROLLBACK TRANSACTION;
+UPDATE vt1 SET (c1)=(x'');
+UPDATE OR IGNORE vt1 SET (c0, c1)=('0.891432133301884', 0Xce017eb) WHERE ((IFNULL(NULL, 1.9861503E9))<(((vt1.c1)||(vt1.c0))));
+UPDATE OR IGNORE vt1 SET c1 = x'', c0 = '593919159' WHERE ((vt1.c0) NOTNULL);
+ROLLBACK TRANSACTION;
+INSERT INTO vt1(vt1, rank) VALUES('usermerge', 6);
+INSERT INTO vt1(vt1) VALUES('integrity-check');
+INSERT INTO vt1(vt1) VALUES('optimize');
+INSERT OR REPLACE INTO vt1(c0, c1) VALUES ('h', 1.059809263E9);
+INSERT INTO vt1(vt1) VALUES('rebuild');
+INSERT OR ROLLBACK INTO vt1 VALUES (NULL, 0.024284064739554467), (x'', '-715631831'), (x'', '-340937596');
+INSERT INTO vt1(vt1, rank) VALUES('automerge', 1);
+INSERT INTO vt1(vt1, rank) VALUES('merge', 2103324873);
+;
+INSERT INTO vt1(vt1, rank) VALUES('crisismerge', 672763066);
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '54321');
+INSERT INTO vt1(vt1) VALUES('rebuild');
+INSERT INTO vt1(vt1, rank) VALUES('pgsz', '8732');
+INSERT INTO vt1(vt1, rank) VALUES('automerge', 10);
+INSERT INTO vt1(vt1, rank) VALUES('automerge', 9);
+INSERT INTO vt1(vt1, rank) VALUES('usermerge', 13);
+INSERT INTO vt1(vt1, rank) VALUES('crisismerge', 699124178);
+INSERT INTO vt1(vt1) VALUES('optimize');
+UPDATE OR IGNORE vt1 SET (c0, c1, c1)=(0.004561000440309382, '孁DvX', NULL) WHERE (((((vt1.c0)OR(x'0672')))AND(vt1.c0)) IN ());
+INSERT OR IGNORE INTO vt1(c0, c1) VALUES (NULL, NULL), ('O~33', '(E'), ('1879735428', 0.7792067838266641);
+REINDEX  vt1;
+INSERT OR FAIL INTO vt1(c1) VALUES (NULL), ('CBSB');
+ANALYZE;
+UPDATE OR IGNORE vt1 SET c0 = '-272980847', c0 = 0.3276041149029565, c0 = x'43', c1 = '174288084';
+END TRANSACTION;
+ROLLBACK TRANSACTION;
+-- SELECT * FROM vt1 WHERE (((CAST(vt1.c0 AS REAL)) BETWEEN (((vt1.c1)>=(vt1.c1))) AND (((vt1.c0) IS TRUE)))) ORDER BY ((((((vt1.c1)) BETWEEN ((vt1.c1)) AND ((vt1.c1)))))<(((vt1.c1 IN (vt1.c1, vt1.c1))))) ASC  NULLS LAST;
+-- cardinality: 0
+-- SELECT * FROM vt1 WHERE (((CAST(vt1.c0 AS REAL)) BETWEEN (((vt1.c1)>(vt1.c1))) AND (((vt1.c0) IS TRUE)))) ORDER BY ((((((vt1.c1)) BETWEEN ((vt1.c1)) AND ((vt1.c1)))))<(((vt1.c1 IN (vt1.c1, vt1.c1))))) ASC  NULLS LAST LIMIT 1;
+-- cardinality: 1
