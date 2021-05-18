@@ -96,8 +96,10 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
         useAggregate = Randomly.getBoolean();
         if (useAggregate) {
-            aggregateFunction = Randomly.fromOptions(SQLite3AggregateFunction.COUNT_ALL,
-                    SQLite3AggregateFunction.MAX, SQLite3AggregateFunction.MIN);
+            // aggregateFunction = Randomly.fromOptions(SQLite3AggregateFunction.COUNT_ALL,
+            //         SQLite3AggregateFunction.MAX, SQLite3AggregateFunction.MIN);
+            // TODO SQL comparision and java comparison
+            aggregateFunction = SQLite3AggregateFunction.COUNT_ALL;
             aggregateColumn = new ArrayList<>();
             aggregateColumn.add(gen.getRandomColumn());
         }
