@@ -15,35 +15,17 @@ import sqlancer.common.query.SQLQueryAdapter;
 import sqlancer.common.query.SQLancerResultSet;
 import sqlancer.sqlite3.SQLite3Errors;
 import sqlancer.sqlite3.SQLite3GlobalState;
+import sqlancer.sqlite3.SQLite3SubsetVisitor;
 import sqlancer.sqlite3.SQLite3Visitor;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
+import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Aggregate.SQLite3AggregateFunction;
 import sqlancer.sqlite3.ast.SQLite3Expression;
-import sqlancer.sqlite3.ast.SQLite3Expression.BetweenOperation;
-import sqlancer.sqlite3.ast.SQLite3Expression.BinaryComparisonOperation;
-import sqlancer.sqlite3.ast.SQLite3Expression.BinaryComparisonOperation.BinaryComparisonOperator;
-import sqlancer.sqlite3.ast.SQLite3Expression.Cast;
-import sqlancer.sqlite3.ast.SQLite3Expression.CollateOperation;
-import sqlancer.sqlite3.ast.SQLite3Expression.Function;
-import sqlancer.sqlite3.ast.SQLite3Expression.InOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join;
-import sqlancer.sqlite3.ast.SQLite3Expression.MatchOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3ColumnName;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Distinct;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Exist;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3OrderingTerm;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixText;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3PostfixUnaryOperation;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3TableReference;
-import sqlancer.sqlite3.ast.SQLite3Expression.SQLite3Text;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation;
 import sqlancer.sqlite3.ast.SQLite3Expression.Sqlite3BinaryOperation.BinaryOperator;
-import sqlancer.sqlite3.ast.SQLite3Expression.Subquery;
-import sqlancer.sqlite3.ast.SQLite3Expression.TypeLiteral;
-import sqlancer.sqlite3.ast.SQLite3Expression.Join;
 import sqlancer.sqlite3.ast.SQLite3Expression.Join.JoinType;
-import sqlancer.sqlite3.ast.SQLite3UnaryOperation;
-import sqlancer.sqlite3.ast.SQLite3UnaryOperation.UnaryOperator;
 import sqlancer.sqlite3.ast.SQLite3Select;
 import sqlancer.sqlite3.ast.SQLite3Select.SelectType;
 import sqlancer.sqlite3.gen.SQLite3Common;
@@ -128,75 +110,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         // checkSubsetQuery(originalQueryString, supersetQueryString, useAggregate);
     }
 
-
-    private void mutateBinaryComparisonOperation(BinaryComparisonOperation expr, boolean negated) {
-        if (negated) {
-            // build superset
-            switch (expr.getOperator()) {
-                case SMALLER:
-                case SMALLER_EQUALS:
-                case GREATER:
-                case GREATER_EQUALS:
-                case EQUALS:
-                case NOT_EQUALS:
-                case LIKE:
-                default:
-                    return ;
-            }
-        } else {
-            // build subset
-            switch (expr.getOperator()) {
-                case SMALLER:
-                case SMALLER_EQUALS:
-                case GREATER:
-                case GREATER_EQUALS:
-                case EQUALS:
-                case NOT_EQUALS:
-                case LIKE:
-                default:
-                    return ;
-            }
-        }
-
-        
-
-
-    }
-
-    private void mutatePredicate(SQLite3Expression expr, boolean negated) throws SQLException {
-        if (expr instanceof SQLite3UnaryOperation) {
-            SQLite3UnaryOperation unaryExpr = (SQLite3UnaryOperation)expr;
-            if unaryExpr.getOperation() == UnaryOperator.NOT {
-                mutatePredicate(unaryExpr.getExpression(), !negated);
-            }
-        }
-        else if (expr instanceof BinaryComparisonOperation) {
-            mutateBinaryComparisonOperation((BinaryComparisonOperation)expr, negated);
-            mutate
-        } else if (expr instanceof InOperation && checkCanMutate(IN_SHRINK)) {
-            InOperation inExpr = (InOperation)expr;
-            List<SQLite3Expression> rightExprList = inExpr.getRightExpressionList();
-            if (inExpr.getRightSelect.isEmpty()) {
-                if (negated) {
-                    // NOT IN
-                    int N = Randomly.getInteger()
-                    while (N--) {
-                        rightExprList.add(gen.generateExpression);
-                    }
-                } else {
-                    // IN
-                    int N = Randomly.getInteger()
-                    while (N-- && !rightExprList.isEmpty()) {
-                        rightExprList.remove(rightExprList.size() - 1);
-                    }
-                }
-                mutatePredicate(inExpr.getLeft());
-                for ()
-            }
-        }
-    }
-
-    private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition) throws SQLException {
+    private void getOriginalQuery(SQLite3Select select, SQLite3Expression randomWhereCondition, List<Join> joinStatements) throws SQLException {
         if (Randomly.getBoolean()) {
             select.setOrderByExpressions(gen.generateOrderBys());
         }
@@ -218,8 +132,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         return ((1 << (t.ordinal())) & subsetConfig) != 0;
     }
 
-    private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition,
-                    List<SQLite3Expression> tableRefs, List<Join> joins) throws SQLException {
+    private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition, List<Join> joinStatements) throws SQLException {
         if (Randomly.getBoolean()) {
             select.setOrderByExpressions(gen.generateOrderBys());
         }
@@ -233,7 +146,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
         // mutate JOIN
         if (checkCanMutate(MutationOperatorType.JOIN_OUTER_INNER)) {
-            for (Join joinStmt : joins) {
+            for (Join joinStmt : joinStatements) {
                 if (joinStmt.getType() == JoinType.OUTER) {
                     joinStmt.setType(JoinType.INNER);
                     break;
@@ -244,23 +157,24 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
 
         // mutate DISTINCT
         if (checkCanMutate(MutationOperatorType.DISTINCT)) {
-            select.setSelectType(SelectType.DINSTINCT);
+            select.setSelectType(SelectType.DISTINCT);
         }
-        // mutate GROUP_BY
-        if (checkCanMutate(MutationOperatorType.GROUP_BY)) {
-            // TODO mutate group_by
-        }
+        // // mutate GROUP_BY
+        // if (checkCanMutate(MutationOperatorType.GROUP_BY)) {
+        //     // TODO mutate group_by
+        // }
 
         // mutate LIMIT
         if (checkCanMutate(MutationOperatorType.LIMIT)) {
-            select.setLimitClause(SQLite3IntConstant(Randomly.getInteger()));
+            select.setLimitClause(SQLite3Constant.createIntConstant(Randomly.smallNumber()));
         }
 
         // mutate predicate
-        mutatePredicate(randomWhereCondition, false);
+        SQLite3SubsetVisitor mutatePredicateVisitor = new SQLite3SubsetVisitor(true, subsetConfig);
+        mutatePredicateVisitor.visit(randomWhereCondition);
 
         // mutate ADD_AND
-        if (checkCanMutate(ADD_AND)) {
+        if (checkCanMutate(MutationOperatorType.ADD_AND)) {
             SQLite3Expression andExpression = new Sqlite3BinaryOperation(randomWhereCondition,
                         gen.generateExpression(), BinaryOperator.AND);
             select.setWhereClause(andExpression);

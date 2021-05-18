@@ -1,10 +1,15 @@
 package sqlancer.sqlite3;
 
 import java.util.Random;
+
+import sqlancer.Randomly;
+import sqlancer.SQLConnection;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
 import sqlancer.sqlite3.ast.SQLite3Case.CasePair;
 import sqlancer.sqlite3.ast.SQLite3Case.SQLite3CaseWithBaseExpression;
 import sqlancer.sqlite3.ast.SQLite3Case.SQLite3CaseWithoutBaseExpression;
+import sqlancer.sqlite3.ast.SQLite3Constant.SQLite3TextConstant;
+import sqlancer.sqlite3.ast.SQLite3Cast;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Expression.BetweenOperation;
@@ -36,6 +41,7 @@ import sqlancer.sqlite3.ast.SQLite3WindowFunction;
 import sqlancer.sqlite3.ast.SQLite3WindowFunctionExpression;
 import sqlancer.sqlite3.ast.SQLite3WindowFunctionExpression.SQLite3WindowFunctionFrameSpecBetween;
 import sqlancer.sqlite3.ast.SQLite3WindowFunctionExpression.SQLite3WindowFunctionFrameSpecTerm;
+import sqlancer.sqlite3.schema.SQLite3DataType;
 
 public class SQLite3SubsetVisitor implements SQLite3Visitor {
 
@@ -62,6 +68,11 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         // GROUP_BY, TODO
         LIMIT,
         INTERSECT
+    }
+
+    public SQLite3SubsetVisitor(boolean subset_, int subsetConfig_) {
+        this.subset = subset_;
+        this.subsetConfig = subsetConfig_;
     }
     // private int nrTabs;
 
@@ -183,9 +194,14 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         visit(op.getLeft());
         if (op.getRightExpressionList() != null) {
             if (checkCanMutate(MutationOperatorType.IN_SHRINK) && subset) {
-                Random rand = new Random();
-                int lenList = rand.nextInt(op.getRightExpressionList().size()) + 1;
-                op.setRightExpressionList(op.getRightExpressionList().subList(0, lenList));
+                int listLen = op.getRightExpressionList().size();
+                if (listLen >= 2) {
+                    Random rand = new Random();
+                    int newListLen = rand.nextInt(op.getRightExpressionList().size()) + 1;
+                    op.setRightExpressionList(op.getRightExpressionList().subList(0, newListLen));
+
+                }
+
             }
             for (SQLite3Expression expr : op.getRightExpressionList()) {
                 visit(expr);
@@ -215,6 +231,26 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         visit(join.getOnClause());
     }
 
+    private boolean canChangeValue(SQLite3Expression right) {
+        if (right == null || !(right instanceof SQLite3Constant)) {
+            return false;
+        }
+        SQLite3Constant c = (SQLite3Constant)right;
+        return c.getDataType() == SQLite3DataType.INT || c.getDataType() == SQLite3DataType.REAL;
+    }
+
+    private SQLite3Expression changeValue(SQLite3Expression right, boolean smaller) {
+        long minus = smaller? -1 : 1;
+        SQLite3Constant c = (SQLite3Constant)right;
+        if (c.getDataType() == SQLite3DataType.INT) {
+            long v = c.asInt();
+            return (SQLite3Expression)SQLite3Constant.createIntConstant(v + minus * Randomly.smallNumber());
+        } else {
+            double v = c.asDouble();
+            return (SQLite3Expression)SQLite3Constant.createRealConstant(v + minus * Randomly.smallNumber());
+        }
+    }
+
     @Override
     public void visit(BinaryComparisonOperation op) {
         // print(op);
@@ -223,55 +259,85 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         if (subset) {
             // subset operation
             if (operator == BinaryComparisonOperator.LIKE && checkCanMutate(MutationOperatorType.LIKE_SUBSTITUTE)) {
-
+                SQLite3Expression right = op.getRight();
+                if (right != null && right instanceof SQLite3Constant) {
+                    SQLite3Constant rightConst = (SQLite3Constant)right;
+                    if (rightConst != null && rightConst instanceof SQLite3TextConstant) {
+                        String rightStr = ((SQLite3TextConstant)rightConst).asString();
+                        rightStr.replace('%', '_');
+                        op.setRight((SQLite3Expression)SQLite3Constant.createTextConstant(rightStr));
+                    }
+                }
             } else if (operator == BinaryComparisonOperator.SMALLER && checkCanMutate(MutationOperatorType.SMALLER_VALUE_CHANGE)) {
-
+                if (canChangeValue(op.getRight())) {
+                    op.setRight(changeValue(op.getRight(), true));
+                }
             } else if (operator == BinaryComparisonOperator.SMALLER_EQUALS) {
                 if (checkCanMutate(MutationOperatorType.SMALLEREQ_SUBSTITUE)) {
-
+                    op.setOp(Randomly.fromOptions(BinaryComparisonOperator.SMALLER, BinaryComparisonOperator.EQUALS));
                 }
                 if (checkCanMutate(MutationOperatorType.SMALLEREQ_VALUE_CHANGE)) {
-
+                    if (canChangeValue(op.getRight())) {
+                        op.setRight(changeValue(op.getRight(), true));
+                    }
                 }
             } else if (operator == BinaryComparisonOperator.GREATER && checkCanMutate(MutationOperatorType.GREATEREQ_VALUE_CHANGE)) {
+                if (canChangeValue(op.getRight())) {
+                    op.setRight(changeValue(op.getRight(), false));
+                }
 
             } else if (operator == BinaryComparisonOperator.GREATER_EQUALS) {
                 if (checkCanMutate(MutationOperatorType.GREATEREQ_SUBSTITUE)) {
-
+                    op.setOp(Randomly.fromOptions(BinaryComparisonOperator.GREATER, BinaryComparisonOperator.EQUALS));
                 }
                 if (checkCanMutate(MutationOperatorType.GREATEREQ_VALUE_CHANGE)) {
-
+                    if (canChangeValue(op.getRight())) {
+                        op.setRight(changeValue(op.getRight(), false));
+                    }
                 }
-
             } else if (operator == BinaryComparisonOperator.NOT_EQUALS && checkCanMutate(MutationOperatorType.NOTEQ_SUBSTITUE)) {
-
+                op.setOp(Randomly.fromOptions(BinaryComparisonOperator.SMALLER, BinaryComparisonOperator.GREATER));
             }
         } else {
             // superset operation
             if (operator == BinaryComparisonOperator.LIKE && checkCanMutate(MutationOperatorType.LIKE_SUBSTITUTE)) {
-
+                SQLite3Expression right = op.getRight();
+                if (right != null && right instanceof SQLite3Constant) {
+                    SQLite3Constant rightConst = (SQLite3Constant)right;
+                    if (rightConst != null && rightConst instanceof SQLite3TextConstant) {
+                        String rightStr = ((SQLite3TextConstant)rightConst).asString();
+                        rightStr.replace('_', '%');
+                        op.setRight((SQLite3Expression)SQLite3Constant.createTextConstant(rightStr));
+                    }
+                }
             } else if (operator == BinaryComparisonOperator.SMALLER) {
                 if (checkCanMutate(MutationOperatorType.SMALLEREQ_SUBSTITUE)) {
-
+                    op.setOp(Randomly.fromOptions(BinaryComparisonOperator.SMALLER_EQUALS, BinaryComparisonOperator.NOT_EQUALS));
                 }
                 if (checkCanMutate(MutationOperatorType.SMALLEREQ_VALUE_CHANGE)) {
-
+                    if (canChangeValue(op.getRight())) {
+                        op.setRight(changeValue(op.getRight(), false));
+                    }
                 }
-
             } else if (operator == BinaryComparisonOperator.SMALLER_EQUALS && checkCanMutate(MutationOperatorType.SMALLER_VALUE_CHANGE)) {
-
+                if (canChangeValue(op.getRight())) {
+                    op.setRight(changeValue(op.getRight(), false));
+                }
             } else if (operator == BinaryComparisonOperator.GREATER) {
                 if (checkCanMutate(MutationOperatorType.GREATEREQ_SUBSTITUE)) {
-
+                    op.setOp(Randomly.fromOptions(BinaryComparisonOperator.GREATER_EQUALS, BinaryComparisonOperator.NOT_EQUALS));
                 }
                 if (checkCanMutate(MutationOperatorType.GREATEREQ_VALUE_CHANGE)) {
-
+                    if (canChangeValue(op.getRight())) {
+                        op.setRight(changeValue(op.getRight(), true));
+                    }
                 }
-
             } else if (operator == BinaryComparisonOperator.GREATER_EQUALS && checkCanMutate(MutationOperatorType.GREATER_VALUE_CHANGE)) {
-
+                if (canChangeValue(op.getRight())) {
+                    op.setRight(changeValue(op.getRight(), true));
+                }
             } else if (operator == BinaryComparisonOperator.EQUALS && checkCanMutate(MutationOperatorType.NOTEQ_SUBSTITUE)) {
-
+                op.setOp(Randomly.fromOptions(BinaryComparisonOperator.SMALLER_EQUALS, BinaryComparisonOperator.GREATER_EQUALS));
             }
         }
         visit(op.getRight());

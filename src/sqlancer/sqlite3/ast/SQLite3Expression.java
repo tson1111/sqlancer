@@ -640,7 +640,7 @@ public abstract class SQLite3Expression {
         }
 
         public void setRightExpressionList(List<SQLite3Expression> newRightExprList) {
-            rightExpressionList = newRightExprList;
+            this.rightExpressionList = newRightExprList;
         }
 
         @Override
@@ -724,9 +724,9 @@ public abstract class SQLite3Expression {
     public static class BinaryComparisonOperation extends SQLite3Expression
             implements BinaryOperation<SQLite3Expression> {
 
-        private final BinaryComparisonOperator operation;
-        private final SQLite3Expression left;
-        private final SQLite3Expression right;
+        private BinaryComparisonOperator operation;
+        private SQLite3Expression left;
+        private SQLite3Expression right;
 
         public BinaryComparisonOperation(SQLite3Expression left, SQLite3Expression right,
                 BinaryComparisonOperator operation) {
@@ -737,6 +737,14 @@ public abstract class SQLite3Expression {
 
         public BinaryComparisonOperator getOperator() {
             return operation;
+        }
+
+        public void setRight(SQLite3Expression newRight) {
+            this.right = newRight;
+        }
+
+        public void setOp(BinaryComparisonOperator newOp) {
+            this.operation = newOp;
         }
 
         @Override
