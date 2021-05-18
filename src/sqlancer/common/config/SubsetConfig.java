@@ -1,12 +1,12 @@
-package sqlancer.common.config
+// package sqlancer.common.config
 
-import com.alibaba.fastjson.*;  
+// import com.alibaba.fastjson.*;  
 
-public class SubsetConfig {
-    @JSONField
+// public class SubsetConfig {
+//     @JSONField
 
-    public SubsetConfig(string path) {
+//     public SubsetConfig(string path) {
         
-    }
+//     }
 
-}
+// }

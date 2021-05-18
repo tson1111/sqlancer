@@ -639,6 +639,10 @@ public abstract class SQLite3Expression {
             return rightSelect;
         }
 
+        public void setRightExpressionList(List<SQLite3Expression> newRightExprList) {
+            rightExpressionList = newRightExprList;
+        }
+
         @Override
         // The collating sequence used for expressions of the form "x IN (y, z, ...)" is
         // the collating sequence of x.

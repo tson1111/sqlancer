@@ -74,7 +74,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         // -------------------------------------------
         JOIN_OUTER_INNER, // outer join -> inner join
         DISTINCT,
-        GROUP_BY,
+        // GROUP_BY, TODO
         LIMIT,
         INTERSECT
     }
@@ -99,7 +99,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     public void check() throws SQLException {
         // set subset combination strategy
         Random rand = new Random();
-        subsetConfig = rand.nextInt(1 << 15); // dependent to the number of MutationOperatorType
+        subsetConfig = rand.nextInt(1 << 14); // dependent to the number of MutationOperatorType
 
         SQLite3Tables randomTables = s.getRandomTableNonEmptyTables();
         List<SQLite3Column> columns = randomTables.getColumns();
@@ -215,7 +215,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     }
 
     private boolean checkCanMutate(MutationOperatorType t) {
-        return (1 << (t.ordinal())) & subsetConfig != 0;
+        return ((1 << (t.ordinal())) & subsetConfig) != 0;
     }
 
     private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition,
