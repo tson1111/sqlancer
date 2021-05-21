@@ -1,0 +1,93 @@
+--java.lang.AssertionError: 63 0
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:236)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:111)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/21 16:03:30
+-- Database: database2
+-- Database version: 3.34.0
+-- seed value: 1621584209260
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA case_sensitive_like=ON;
+CREATE TEMP TABLE t0 (c0 TEXT , c1 REAL , FOREIGN KEY(c1) REFERENCES t0(c0) ON DELETE SET DEFAULT ON UPDATE SET NULL);
+CREATE VIRTUAL TABLE rt1 USING rtree_i32(c0, c1, c2, +c3 INT , +c4 INT );
+PRAGMA temp.foreign_keys = false;
+INSERT OR ROLLBACK INTO rt1(c2) VALUES (NULL), ('-1657868902'), (x'');
+INSERT OR ROLLBACK INTO rt1(c1) VALUES ('-1657868902');
+PRAGMA legacy_file_format;
+CREATE TEMPORARY VIEW v0(c0) AS SELECT ALL ((((rt1.c4) BETWEEN (x'7f') AND ('-639806067')))|(MAX(rt1.c4))) FROM rt1, t0 WHERE ((NOT (COALESCE(DISTINCT '-639806067', '-1943758248', '砗냍''Y'))));
+ANALYZE;
+INSERT OR REPLACE INTO rt1(c0, c3, c4) VALUES (NULL, NULL, 0.9563842387922677), (x'', 1296436081, ''), (NULL, 0.9563842387922677, '');
+PRAGMA secure_delete = false;
+INSERT OR REPLACE INTO rt1(c1, c3) VALUES (NULL, NULL), (x'96', x'');
+SELECT rtreecheck('rt1');
+UPDATE OR IGNORE t0 SET (c0, c0)=(0.9252375960928885, x'') WHERE x'';
+PRAGMA cache_spill = false;
+INSERT OR FAIL INTO rt1(c0, c4) VALUES (-1.943758248E9, NULL);
+PRAGMA reverse_unordered_selects = false;
+INSERT OR ROLLBACK INTO t0 VALUES (NULL, x'c41287'), (x'28', x'');
+UPDATE OR IGNORE rt1 SET (c1, c1)=(x'', -1.943758248E9) WHERE (+ ('' COLLATE RTRIM));
+UPDATE OR ABORT t0 SET (c0, c0)=(0Xffffffff8c249a58, 0.9026024222216251);
+INSERT OR FAIL INTO rt1(c1, c4) VALUES ('1108429958', '!'), ('0.9026024222216251', NULL), (0.9252375960928885, 0.4913541567632721);
+INSERT OR FAIL INTO t0(c0) VALUES (''), (0.7029736854955707), (-1377752059), (x'');
+INSERT OR FAIL INTO rt1(c1, c0) VALUES (1.296436081E9, x'9286'), (0.3019118844071371, NULL);
+INSERT OR REPLACE INTO rt1(c1) VALUES ('D7O'), ('215068877'), (0.3045574586259632);
+INSERT OR IGNORE INTO rt1(c4, c1) VALUES ('H', NULL), ('1296436081', '215068877'), (NULL, 215068877), (NULL, NULL);
+INSERT OR REPLACE INTO t0(c0, c1) VALUES (NULL, NULL);
+BEGIN  TRANSACTION;
+REINDEX BINARY;
+PRAGMA temp.cache_size = 0;
+INSERT OR IGNORE INTO t0(c0) VALUES ('-639806067'), (NULL), ('6㣻L-'), ('');
+INSERT OR IGNORE INTO t0(c1, c0) VALUES ('-1377752059', x'2e');
+INSERT OR IGNORE INTO t0(c1) VALUES (0xffffffffe5997817);
+ANALYZE;
+INSERT OR IGNORE INTO t0(c1, c0) VALUES (-720691788, '-1039049624'), (0xcd1b0cd, x'd6');
+PRAGMA main.stats;
+DELETE FROM sqlite_stat1 WHERE HEX(CASE WHEN '-2055052031' THEN NULL WHEN 0.6926165788021177 THEN '697304051' ELSE x'bb' END);
+INSERT OR IGNORE INTO t0 VALUES (0.3019118844071371, ']');
+PRAGMA temp.foreign_keys;
+INSERT OR ABORT INTO rt1(c0, c1) VALUES (x'', '{'), (NULL, x'');
+INSERT OR IGNORE INTO rt1(c2, c3) VALUES (x'ea', '-1377752059'), (0X38449df4, 0.20646569766441547), (x'', x'');
+PRAGMA incremental_vacuum(-1510100781);
+PRAGMA main.journal_mode;
+UPDATE OR FAIL t0 SET c1 = 0.1138854116582051 WHERE (((t0.c1, (x'340a' IN ())))>=((t0.c0, t0.c0 COLLATE BINARY)));
+UPDATE OR IGNORE rt1 SET (c1, c2)=('0(i[M', 215068877);
+ROLLBACK TRANSACTION;
+UPDATE OR IGNORE t0 SET (c0, c0)=(0X7d4638fb, '944020980') WHERE (NOT ((- (t0.c1))));
+INSERT OR IGNORE INTO t0(c0) VALUES (x'f5'), (NULL), (0.5366450696680671), (x'8a');
+UPDATE OR IGNORE rt1 SET (c1, c1)=(NULL, x'') WHERE CASE ((rt1.c2) BETWEEN (rt1.c0) AND (rt1.c0))  WHEN rt1.c2 THEN rt1.c2 COLLATE BINARY WHEN rt1.c1 COLLATE NOCASE THEN ((((((((rt1.c0)AND(rt1.c3)))AND(rt1.c1)))AND(rt1.c3)))AND(rt1.c1)) WHEN TYPEOF(DISTINCT rt1.c2) THEN CAST(rt1.c3 AS REAL) ELSE ((rt1.c3)!=(rt1.c0)) END;
+PRAGMA cell_size_check = true;
+PRAGMA application_id;
+INSERT OR IGNORE INTO t0(c0) VALUES (NULL), (0Xffffffffdee9db44);
+UPDATE OR IGNORE t0 SET c1 = '-720691788' WHERE t0.c0;
+INSERT OR IGNORE INTO rt1(c4, c1, c2, c0) VALUES (0Xffffffffa5fdb0d3, x'', NULL, 0.8967950552227084);
+PRAGMA main.cell_size_check = true;
+PRAGMA defer_foreign_keys = true;
+INSERT OR ABORT INTO rt1(c1) VALUES ('400848204');
+INSERT OR IGNORE INTO rt1(c4, c2, c0) VALUES ('-InfinityK', NULL, 0.6926165788021177);
+REINDEX;
+REINDEX;
+COMMIT;
+REINDEX;
+PRAGMA main.auto_vacuum = NONE;
+INSERT OR REPLACE INTO t0(c1, c0) VALUES ('Be( ?g(s4', 0.4839974594748587), (0.1138854116582051, '-285060866');
+REINDEX NOCASE;
+INSERT OR IGNORE INTO rt1(c4, c0, c1, c2, c3) VALUES (NULL, 0Xffffffff85826501, NULL, x'4635', x'bb69f5'), (0.7029736854955707, x'', NULL, x'50', NULL), (0.8459459991059705, 0.1619078463497131, -1.039049624E9, -1.943758248E9, -1128621125), (x'', NULL, 0.09986147996363959, NULL, 0x17e4754c);
+END TRANSACTION;
+PRAGMA shrink_memory;
+PRAGMA main.journal_mode = PERSIST;
+UPDATE OR IGNORE rt1 SET c3 = x'f5', c0 = 'M,E}', c4 = 0.6452654935758179;
+ANALYZE;
+END;
+ROLLBACK TRANSACTION;
+--SUBSET BUG!
+SELECT ALL COUNT(*) FROM v0, t0, rt1 WHERE (((((v0.c0)IS NOT(rt1.c1)))IS NOT((rt1.c0 IN (v0.c0))))) ORDER BY ((NULL)IS((t0.c0 IN ()))) DESC, (((rt1.c4))!=((t0.c0))) COLLATE BINARY ASC  NULLS LAST;
+SELECT ALL COUNT(*) FROM v0, t0, rt1 WHERE (((((v0.c0)IS NOT(rt1.c1)))IS NOT((rt1.c0 IN (v0.c0, rt1.c0))))) ORDER BY CASE WHEN TRIM(DISTINCT rt1.c4) THEN TRIM(DISTINCT rt1.c1, NULL) WHEN (((t0.c0)) NOT BETWEEN ((rt1.c1)) AND ((t0.c1))) THEN CASE WHEN rt1.c0 THEN rt1.c0 WHEN NULL THEN rt1.c3 WHEN v0.c0 THEN t0.c1 END ELSE NULL COLLATE NOCASE END DESC  NULLS LAST, 1.886844653E9 ASC  NULLS FIRST;

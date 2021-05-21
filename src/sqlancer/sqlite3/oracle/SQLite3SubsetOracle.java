@@ -227,13 +227,13 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
             }
             if (aggregateFunction == SQLite3AggregateFunction.MIN) {
                 if (subsetCount < originCount && subsetCount != 0) { // TODO: update sqlite version?
-                    state.getState().getLocalState().log("--SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
-                    throw new AssertionError(subsetCount + " " + originCount);
+                    state.getState().getLocalState().log("--SUBSET BUG!\n" + originalQuery + ";\n" + subsetQuery + ";");
+                    throw new AssertionError(originCount + " " + subsetCount);
                 }
             } else {
                 if (subsetCount > originCount && subsetCount != 0) {
-                    state.getState().getLocalState().log("--SUBSET BUG!\n" + subsetQuery + ";\n" + originalQuery + ";");
-                    throw new AssertionError(subsetCount + " " + originCount);
+                    state.getState().getLocalState().log("--SUBSET BUG!\n" + originalQuery + ";\n" + subsetQuery + ";");
+                    throw new AssertionError(originCount + " " + subsetCount);
                 }
             }
         } else {

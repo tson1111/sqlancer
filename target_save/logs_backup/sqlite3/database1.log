@@ -1,0 +1,98 @@
+--java.lang.AssertionError: the size of the result sets mismatch (0 and 1)!
+---- SELECT ALL * FROM rt0 WHERE (((INSTR(rt0.c0, rt0.c1))LIKE(((rt0.c3)<=(rt0.c4)))));
+---- cardinality: 0
+---- SELECT DISTINCT * FROM rt0 WHERE (((INSTR(rt0.c0, rt0.c1))LIKE(((rt0.c3)=(rt0.c4)))));
+---- cardinality: 1
+--	at sqlancer.ComparatorHelper.assumeResultSetsAreSubset(ComparatorHelper.java:126)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:244)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:111)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/21 16:03:44
+-- Database: database1
+-- Database version: 3.34.0
+-- seed value: 1621584209259
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA case_sensitive_like=ON;
+CREATE VIRTUAL TABLE rt0 USING rtree(c0, c1, c2, c3, c4, +c5 BLOB );
+PRAGMA defer_foreign_keys;
+INSERT OR IGNORE INTO rt0(c0) VALUES (0.24098641297334855), (0x547102be), (0.10865357705182588);
+PRAGMA recursive_triggers = true;
+REINDEX;
+INSERT OR IGNORE INTO rt0(c5) VALUES (x'8d8e');
+PRAGMA main.shrink_memory;
+BEGIN DEFERRED TRANSACTION;
+DELETE FROM sqlite_stat1;
+DELETE FROM sqlite_stat1 WHERE (((x'd2')) NOT BETWEEN (((('1416692414')IS NOT('wG7')))) AND (((NULL IN ()))));
+PRAGMA secure_delete = false;
+CREATE VIEW v0(c0, c1, c2, c3) AS SELECT DISTINCT CASE rt0.c1  WHEN (NOT (rt0.c0)) THEN CAST(rt0.c2 AS NUMERIC) WHEN (rt0.c1 IN ()) THEN 'h*Z)JZ' ELSE MIN(rt0.c5) END, ((((((((((rt0.c0)OR(rt0.c0)))OR(rt0.c1)))AND(rt0.c1)))AND(rt0.c1))) BETWEEN (((rt0.c0) NOT BETWEEN (rt0.c5) AND (rt0.c5))) AND (((-1e500) NOT NULL))), rt0.c1 COLLATE NOCASE COLLATE NOCASE COLLATE NOCASE, (((rt0.c0, rt0.c1, -1686810272, rt0.c0)) NOT BETWEEN ((CAST(rt0.c2 AS INTEGER), AVG(rt0.c2), rt0.c5 COLLATE NOCASE, CASE rt0.c5  WHEN rt0.c3 THEN rt0.c1 WHEN rt0.c5 THEN 0.8509484804172017 ELSE rt0.c5 END)) AND ((NULL, '1416692414', COUNT(*), MIN(rt0.c0)))) FROM rt0;
+PRAGMA main.short_column_names;
+ROLLBACK TRANSACTION;
+PRAGMA temp.automatic_index = false;
+REINDEX;
+ROLLBACK TRANSACTION;
+INSERT OR FAIL INTO rt0 VALUES ('0f뎕r-K', NULL, 1759023435, NULL, x'5f54', NULL), (0Xffffffffbe70c545, x'1d', 0.18401835022975888, x'', x'9f52', NULL), ('1494440190', NULL, x'', '979971954', '-1680886891', NULL);
+INSERT OR ROLLBACK INTO rt0(c2, c1, c4) VALUES ('1494440190', '-1099905723', '-1680886891');
+INSERT OR REPLACE INTO rt0(c4, c0, c2, c1, c5) VALUES ('313572229', 0.18401835022975888, x'4e46', 0.011134017384967887, 0.10865357705182588), (x'', x'', '-85642736', x'', NULL);
+INSERT OR IGNORE INTO rt0(c4, c2, c5, c1, c0) VALUES (0.10865357705182588, NULL, 0.011134017384967887, '-1686810272', 0.9254248491457063), (0.778393882585433, x'', NULL, NULL, '313572229'), ('-582624396', x'', NULL, 519782355, x'9d4338fa'), (NULL, '-0.0', 0.3752184027289154, x'', 0.21364055062111986);
+REINDEX;
+ROLLBACK TRANSACTION;
+REINDEX;
+END;
+COMMIT TRANSACTION;
+BEGIN  TRANSACTION;
+UPDATE OR ABORT rt0 SET (c5, c0)=(0.4100366999267857, '-1680886891') WHERE (((rt0.c4, rt0.c3, rt0.c1, rt0.c0)) NOT BETWEEN ((((rt0.c4)=(rt0.c3)), NULL, '0.3752184027289154', (rt0.c0 IN (rt0.c1)))) AND ((LIKELIHOOD(DISTINCT rt0.c2, rt0.c1), (rt0.c0 IN (rt0.c1)), ((rt0.c1) NOT BETWEEN (rt0.c0) AND (rt0.c5)), ((rt0.c5)IS NOT(rt0.c0)))));
+UPDATE OR IGNORE rt0 SET c5 = '-1686810272', c3 = 'QKm?A hdY' WHERE (((NOT (rt0.c5)))>(CASE rt0.c1  WHEN rt0.c2 THEN rt0.c0 END));
+BEGIN  TRANSACTION;
+PRAGMA main.short_column_names = false;
+BEGIN  TRANSACTION;
+INSERT OR IGNORE INTO rt0(c0, c1, c2) VALUES (x'7508', '1759023435', '-9223372036854775808'), ('~)}RU~lF', 0.1225861322338806, 0.24449600507039115), ('QKm?A hdY', x'', x'92');
+INSERT OR FAIL INTO rt0(c4, c3, c5, c1, c0, c2) VALUES ('1544147450', -2133991223, '-1788446709', NULL, 0Xffffffffe3fbb66e, 0.7345961656477212), (-551774122, NULL, 0.013847501307411414, NULL, x'981d', x'96');
+INSERT OR IGNORE INTO rt0(c2, c4, c5, c0, c3, c1) VALUES ('Kv[KA', x'd0', '&', NULL, NULL, ''), (NULL, 'p', -470043026, '3', x'', 0.4518621043843096), (1625974852, x'', '', '-1099905723', '0.10865357705182588', NULL), (1501025326, -5.51774122E8, '
+', x'39e2ee', '-1099905723', NULL);
+BEGIN  TRANSACTION;
+PRAGMA cell_size_check = false;
+PRAGMA main.reverse_unordered_selects;
+REINDEX;
+PRAGMA temp.journal_mode = PERSIST;
+REINDEX  rt0;
+ROLLBACK TRANSACTION;
+ROLLBACK TRANSACTION;
+INSERT OR ABORT INTO rt0 VALUES ('.8.', -536805305, 'b', 826633472, 0Xffffffffb1ff50ae, 'b');
+INSERT OR IGNORE INTO rt0(c5, c1, c2, c0, c3) VALUES ('-1148204065', '-551774122', x'13', 0.24098641297334855, 'b');
+INSERT OR IGNORE INTO rt0 VALUES ((('Em*B')<(0.3235800665272366)) COLLATE BINARY, x'fe', x'', 0.8153130241686866, NULL, NULL);
+PRAGMA main.application_id = -2439662203376483372;
+PRAGMA short_column_names;
+INSERT OR ABORT INTO rt0(c5) VALUES ('-765474610');
+PRAGMA temp.default_cache_size;
+INSERT OR IGNORE INTO rt0(c5, c3, c1, c2, c0) VALUES ('519782355', x'e8', ',mRcsW', NULL, 0Xffffffffb7e606dc), (0.9532682328217849, x'', NULL, x'', '0.013847501307411414');
+ROLLBACK TRANSACTION;
+INSERT OR ABORT INTO rt0(c2, c0, c1, c3) VALUES ('1819868545', 'v', '1553700727', '径'), (x'90', -5.82624396E8, x'', NULL), (NULL, '', NULL, x''), (NULL, x'', '', 'ku');
+INSERT OR IGNORE INTO rt0(c0, c5) VALUES (x'079fb035', 0.8153130241686866), ('1501025326', 0.9372764884462109), (0.3235800665272366, '0f뎕r-k'), ('-1148204065', 0.5238011073195215), (((NULL)>(CASE 0.9372764884462109  WHEN x'1e4d' THEN 1.819868545E9 ELSE x'33' END)), NULL);
+BEGIN EXCLUSIVE TRANSACTION;
+BEGIN  TRANSACTION;
+REINDEX NOCASE;
+ROLLBACK TRANSACTION;
+ROLLBACK TRANSACTION;
+ANALYZE temp;
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO rt0(c4, c5, c3) VALUES (0.20610659909363804, NULL, x'48'), (x'9350', 'mlm', NULL);
+PRAGMA application_id = 1640092024327408657;
+UPDATE OR ABORT rt0 SET c0 = 0.16419663451599087, c0 = x'a7ceb3';
+UPDATE rt0 SET (c2, c5)=(NULL, 430175728);
+PRAGMA temp.integrity_check;
+SELECT rtreecheck('rt0');
+COMMIT;
+ROLLBACK TRANSACTION;
+-- SELECT ALL * FROM rt0 WHERE (((INSTR(rt0.c0, rt0.c1))LIKE(((rt0.c3)<=(rt0.c4)))));
+-- cardinality: 0
+-- SELECT DISTINCT * FROM rt0 WHERE (((INSTR(rt0.c0, rt0.c1))LIKE(((rt0.c3)=(rt0.c4)))));
+-- cardinality: 1

@@ -1,0 +1,121 @@
+--java.lang.AssertionError: the size of the result sets mismatch (0 and 18)!
+---- SELECT ALL * FROM v0, rt0 WHERE ((~ ((((rt0.c0, '7Kn}vw', rt0.c0))>((NULL, v0.c1, rt0.c4))))));
+---- cardinality: 0
+---- SELECT DISTINCT * FROM v0, rt0 WHERE ((~ ((((rt0.c0, '7Kn}vw', rt0.c0))<>((NULL, v0.c1, rt0.c4))))));
+---- cardinality: 18
+--	at sqlancer.ComparatorHelper.assumeResultSetsAreSubset(ComparatorHelper.java:126)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:244)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:111)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/21 16:40:14
+-- Database: database3
+-- Database version: 3.34.0
+-- seed value: 1621586090157
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA case_sensitive_like=ON;
+CREATE VIRTUAL TABLE rt0 USING rtree(c0, c1, c2, c3, c4);
+CREATE VIEW v0(c0, c1, c2, c3) AS SELECT DISTINCT (rt0.c0 IN (NULL)) COLLATE RTRIM, IFNULL(DISTINCT ((rt0.c1)+(rt0.c3)), (rt0.c3 IN (rt0.c4))), ((((rt0.c3) BETWEEN (rt0.c1) AND (rt0.c1)))>>(((rt0.c3)||(rt0.c1)))), ((((((((((MIN(rt0.c2))OR(CAST(rt0.c1 AS BLOB))))OR(((rt0.c2) NOT BETWEEN (rt0.c1) AND (rt0.c4)))))OR(rt0.c0 COLLATE RTRIM)))OR(((0.6442907527389933)&(rt0.c3)))))OR(json_array_length(NULL))) FROM rt0 WHERE (CAST('-2126628954' COLLATE BINARY AS TEXT));
+REINDEX;
+COMMIT;
+INSERT OR ABORT INTO rt0(c2) VALUES (NULL);
+PRAGMA legacy_file_format;
+ANALYZE main;
+ROLLBACK TRANSACTION;
+ROLLBACK TRANSACTION;
+INSERT OR ROLLBACK INTO rt0(c0) VALUES (NULL), (x'8c1cc1');
+ROLLBACK TRANSACTION;
+BEGIN IMMEDIATE TRANSACTION;
+REINDEX BINARY;
+REINDEX;
+INSERT OR IGNORE INTO rt0(c2, c0, c4) VALUES (x'c1', 0.8268545451216625, 'NF3R{}'), (0.5240357706879324, '-917143718', '{8㞦');
+PRAGMA temp.busy_timeout;
+PRAGMA main.optimize;
+ROLLBACK TRANSACTION;
+UPDATE OR ROLLBACK rt0 SET c3 = 0Xffffffff813e37a6 WHERE (((- (rt0.c0)))IS(rt0.c4));
+INSERT OR IGNORE INTO rt0(c1, c3, c0, c2, c4) VALUES (x'', 0x7ca80c31, NULL, NULL, NULL), (x'00', x'2b', 0.7703971579780193, NULL, NULL), (0.5055908321132536, 0.5055908321132536, x'718fe3', x'', '2091387953');
+INSERT OR IGNORE INTO rt0(c2, c3, c4, c1, c0) VALUES ('(3)', -2.126628954E9, x'd7e6', 0.0718610672847394, x''), ('-422617594', x'', '', '0.6442907527389933', '㞦\罚');
+ROLLBACK TRANSACTION;
+COMMIT TRANSACTION;
+BEGIN DEFERRED TRANSACTION;
+ANALYZE;
+INSERT OR IGNORE INTO rt0 VALUES ('1472510349', NULL, NULL, x'', '-2126628954');
+ROLLBACK TRANSACTION;
+BEGIN  TRANSACTION;
+BEGIN  TRANSACTION;
+INSERT OR ROLLBACK INTO rt0(c2, c4, c3, c1, c0) VALUES (0x1c433ae1, ',', 'J', 0.39596229384993986, 4.74168033E8);
+PRAGMA application_id;
+INSERT OR IGNORE INTO rt0(c1, c3, c0, c4) VALUES ('꺓[#^', -411110300, '1801763667', NULL), (NULL, '-411110300', 0xffffffffc9557f5a, '1970748897');
+INSERT OR FAIL INTO rt0(c2, c0, c4) VALUES (NULL, x'e152', '-160454537'), ('', NULL, 'vO-'), (x'fc499e', 5.64899475E8, x''), (NULL, 'up2Fq4[(P)]', 1970748897);
+INSERT OR FAIL INTO rt0(c3, c0, c4) VALUES ((- (CASE WHEN x'6784' THEN -1480904915 WHEN '564899475' THEN 0.6255584987327119 WHEN x'' THEN 'BmFc	9J]g' ELSE '571097516' END)), 0.43162366043340605, NULL);
+INSERT OR IGNORE INTO rt0(c0, c1, c3) VALUES (NULL, '', 'o'), (0.5422864070356156, x'87', NULL);
+INSERT OR FAIL INTO rt0(c2, c0, c4, c1) VALUES (0X7967c860, '-422651537', '474168033', -4.111103E8), ('sd>o q>-', '', x'e2', '');
+INSERT OR IGNORE INTO rt0(c3, c1) VALUES (NULL, 'fC'), ('?', 0.062864643491513);
+COMMIT;
+INSERT OR IGNORE INTO rt0(c0, c2, c4) VALUES (x'1735b0', -422651537, 0.1168226637153359);
+INSERT OR IGNORE INTO rt0 VALUES (NULL, NULL, x'09fee7', 0.5055908321132536, '-1622724578'), (0.7152355099392419, '2118657850', 0x681d791b, x'', 0Xffffffffc1b8c1d7), (x'bb', NULL, NULL, ']', '608229947');
+END;
+INSERT OR ABORT INTO rt0(c0, c3) VALUES ('f', NULL), ('S[[', x'5e0e93');
+INSERT OR IGNORE INTO rt0(c1, c3) VALUES ('-lP9WA', x'5420'), (0.2764042986080413, 274176602);
+UPDATE OR IGNORE rt0 SET c4 = 0Xffffffff89e4ac43;
+ANALYZE rt0;
+PRAGMA main.cell_size_check;
+VACUUM;
+VACUUM;
+VACUUM;
+VACUUM;
+VACUUM;
+VACUUM;
+VACUUM main;
+VACUUM main;
+VACUUM temp;
+ANALYZE;
+PRAGMA temp.secure_delete = false;
+ROLLBACK TRANSACTION;
+BEGIN  TRANSACTION;
+PRAGMA temp.integrity_check;
+REINDEX  rt0;
+UPDATE OR IGNORE rt0 SET c2 = x'', c4 = '17059577', c1 = 0xffffffffad23cd6a;
+BEGIN  TRANSACTION;
+INSERT OR IGNORE INTO rt0(c4, c3, c0) VALUES ('-1044856361', x'78', '');
+INSERT OR IGNORE INTO rt0(c4, c2) VALUES ('7', 0.3580838397001851);
+BEGIN IMMEDIATE TRANSACTION;
+DELETE FROM sqlite_stat1;
+REINDEX  rt0;
+VACUUM;
+VACUUM temp;
+INSERT OR IGNORE INTO rt0(c3) VALUES ('1311048050');
+ANALYZE v0;
+COMMIT;
+INSERT OR REPLACE INTO rt0(c3, c1, c2, c4) VALUES (0.5328882716547831, x'a8', 'D0', NULL), (x'', '1970748897', (((NULL IN ())) NOTNULL), x''), ('', x'72', NULL, x'3836bc'), (0.018844127544308975, x'd0', '474168033', 0.17336278555058016), (0.2099468479356318, NULL, NULL, '{nW{oz	');
+INSERT OR REPLACE INTO rt0(c0, c4, c1, c2) VALUES (x'', '139828782', x'', 1.801763667E9), (NULL, 0.610678700717823, NULL, NULL);
+PRAGMA main.mmap_size;
+ANALYZE;
+PRAGMA temp.legacy_file_format;
+INSERT OR ABORT INTO rt0(c2) VALUES (x''), (0.8537381382408444);
+UPDATE OR IGNORE rt0 SET (c2, c3, c3)=(NULL, 1.970748897E9, 0.06948628357929887);
+INSERT OR IGNORE INTO rt0 VALUES (NULL, NULL, ',T-si!M', 0x1, '139828782'), ('', 2091387953, 0.6442907527389933, x'16114248b8', 'rXǟ<'), (0.2764042986080413, '&B', 0X1c433ae1, '274176602', '1970748897');
+BEGIN  TRANSACTION;
+ROLLBACK TRANSACTION;
+BEGIN  TRANSACTION;
+COMMIT TRANSACTION;
+INSERT OR FAIL INTO rt0(c0, c1, c3, c2) VALUES (x'1ed8', '', 0Xffffffff865ceb12, '');
+INSERT OR IGNORE INTO rt0(c1) VALUES (0.1168226637153359), (0Xffffffffd7312d2f);
+REINDEX;
+INSERT OR ABORT INTO rt0(c4, c2, c3, c0) VALUES (-1929580138, 0.36480882316403274, x'48', 1393917697), (-422651537, '', '334741765', 'Hꈥⅼ');
+INSERT OR IGNORE INTO rt0(c3, c4, c2) VALUES (NULL, '-1245505558', '571097516');
+INSERT OR IGNORE INTO rt0 VALUES (1381429727, 0.06558261317570302, 1280533243, x'd9184c3a', x'ad'), (NULL, NULL, NULL, '-705587845', 0.5340499434245641), (x'19', x'', x'bb', x'28', x''), ('2048442864', x'', x'427ce3', x'5b', -361306221);
+END TRANSACTION;
+ROLLBACK TRANSACTION;
+-- SELECT ALL * FROM v0, rt0 WHERE ((~ ((((rt0.c0, '7Kn}vw', rt0.c0))>((NULL, v0.c1, rt0.c4))))));
+-- cardinality: 0
+-- SELECT DISTINCT * FROM v0, rt0 WHERE ((~ ((((rt0.c0, '7Kn}vw', rt0.c0))<>((NULL, v0.c1, rt0.c4))))));
+-- cardinality: 18

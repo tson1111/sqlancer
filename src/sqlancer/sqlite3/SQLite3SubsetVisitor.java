@@ -102,14 +102,14 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(Sqlite3BinaryOperation op) {
         // print(op);
-        visit(op.getLeft());
-        visit(op.getRight());
+        // visit(op.getLeft());
+        // visit(op.getRight());
     }
 
     @Override
     public void visit(BetweenOperation op) {
         // print(op);
-        visit(op.getTopNode());
+        // visit(op.getTopNode());
     }
 
     @Override
@@ -125,21 +125,21 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(Function f) {
         // print(f);
-        for (SQLite3Expression expr : f.getArguments()) {
-            visit(expr);
-        }
+        // for (SQLite3Expression expr : f.getArguments()) {
+        //     visit(expr);
+        // }
     }
 
     @Override
     public void visit(SQLite3Select s, boolean inner) {
-        for (SQLite3Expression expr : s.getFetchColumns()) {
-            if (expr instanceof SQLite3Aggregate) {
-                visit(expr);
-            }
-        }
-        for (SQLite3Expression expr : s.getJoinClauses()) {
-            visit(expr);
-        }
+        // for (SQLite3Expression expr : s.getFetchColumns()) {
+        //     if (expr instanceof SQLite3Aggregate) {
+        //         visit(expr);
+        //     }
+        // }
+        // for (SQLite3Expression expr : s.getJoinClauses()) {
+        //     visit(expr);
+        // }
         visit(s.getWhereClause());
         if (s.getHavingClause() != null) {
             visit(s.getHavingClause());
@@ -150,18 +150,19 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     public void visit(SQLite3OrderingTerm term) {
         // sb.append("(");
         // print(term);
-        visit(term.getExpression());
+        // visit(term.getExpression());
         // sb.append(")");
     }
 
     @Override
     public void visit(SQLite3UnaryOperation exp) {
         // print(exp);
-        if (exp.getOperation() == SQLite3UnaryOperation.UnaryOperator.NOT) {
+        SQLite3UnaryOperation.UnaryOperator op = exp.getOperation();
+        if (op == SQLite3UnaryOperation.UnaryOperator.NOT || op == SQLite3UnaryOperation.UnaryOperator.NEGATE) {
             subset = !subset;
         }
         visit(exp.getExpression());
-        if (exp.getOperation() == SQLite3UnaryOperation.UnaryOperator.NOT) {
+        if (op == SQLite3UnaryOperation.UnaryOperator.NOT || op == SQLite3UnaryOperation.UnaryOperator.NEGATE) {
             subset = !subset;
         }
     }
@@ -169,19 +170,19 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(SQLite3PostfixUnaryOperation exp) {
         // print(exp);
-        visit(exp.getExpression());
+        // visit(exp.getExpression());
     }
 
     @Override
     public void visit(CollateOperation op) {
         // print(op);
-        visit(op.getExpression());
+        // visit(op.getExpression());
     }
 
     @Override
     public void visit(Cast cast) {
         // print(cast);
-        visit(cast.getExpression());
+        // visit(cast.getExpression());
     }
 
     @Override
@@ -191,7 +192,7 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(InOperation op) {
         // print(op);
-        visit(op.getLeft());
+        // visit(op.getLeft());
         if (op.getRightExpressionList() != null) {
             if (checkCanMutate(MutationOperatorType.IN_SHRINK) && subset) {
                 int listLen = op.getRightExpressionList().size();
@@ -203,32 +204,32 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
                 }
 
             }
-            for (SQLite3Expression expr : op.getRightExpressionList()) {
-                visit(expr);
-            }
+            // for (SQLite3Expression expr : op.getRightExpressionList()) {
+            //     visit(expr);
+            // }
         } else {
-            visit(op.getRightSelect());
+            // visit(op.getRightSelect());
         }
     }
 
     @Override
     public void visit(Subquery query) {
         // print(query);
-        if (query.getExpectedValue() != null) {
-            visit(query.getExpectedValue());
-        }
+        // if (query.getExpectedValue() != null) {
+        //     visit(query.getExpectedValue());
+        // }
     }
 
     @Override
     public void visit(SQLite3Exist exist) {
         // print(exist);
-        visit(exist.getExpression());
+        // visit(exist.getExpression());
     }
 
     @Override
     public void visit(Join join) {
         // print(join);
-        visit(join.getOnClause());
+        // visit(join.getOnClause());
     }
 
     private boolean canChangeValue(SQLite3Expression right) {
@@ -254,7 +255,7 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(BinaryComparisonOperation op) {
         // print(op);
-        visit(op.getLeft());
+        // visit(op.getLeft());
         BinaryComparisonOperator operator = op.getOperator();
         if (subset) {
             // subset operation
@@ -340,7 +341,7 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
                 op.setOp(Randomly.fromOptions(BinaryComparisonOperator.SMALLER_EQUALS, BinaryComparisonOperator.GREATER_EQUALS));
             }
         }
-        visit(op.getRight());
+        // visit(op.getRight());
     }
 
     // public String get() {
@@ -350,22 +351,22 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(SQLite3Function func) {
         // print(func);
-        for (SQLite3Expression expr : func.getArgs()) {
-            visit(expr);
-        }
+        // for (SQLite3Expression expr : func.getArgs()) {
+        //     visit(expr);
+        // }
     }
 
     @Override
     public void visit(SQLite3Distinct distinct) {
         // print(distinct);
-        visit(distinct.getExpression());
+        // visit(distinct.getExpression());
     }
 
     @Override
     public void visit(SQLite3CaseWithoutBaseExpression caseExpr) {
         for (CasePair cExpr : caseExpr.getPairs()) {
             // print(cExpr.getCond());
-            visit(cExpr.getCond());
+            // visit(cExpr.getCond());
             // print(cExpr.getThen());
             visit(cExpr.getThen());
         }
@@ -378,10 +379,10 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(SQLite3CaseWithBaseExpression caseExpr) {
         // print(caseExpr);
-        visit(caseExpr.getBaseExpr());
+        // visit(caseExpr.getBaseExpr());
         for (CasePair cExpr : caseExpr.getPairs()) {
             // print(cExpr.getCond());
-            visit(cExpr.getCond());
+            // visit(cExpr.getCond());
             // print(cExpr.getThen());
             visit(cExpr.getThen());
         }
@@ -394,38 +395,38 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(SQLite3Aggregate aggr) {
         // print(aggr);
-        visit(aggr.getExpectedValue());
+        // visit(aggr.getExpectedValue());
     }
 
     @Override
     public void visit(SQLite3PostfixText op) {
         // print(op);
-        if (op.getExpression() != null) {
-            visit(op.getExpression());
-        }
+        // if (op.getExpression() != null) {
+        //     visit(op.getExpression());
+        // }
     }
 
     @Override
     public void visit(SQLite3WindowFunction func) {
         // print(func);
-        for (SQLite3Expression expr : func.getArgs()) {
-            visit(expr);
-        }
+        // for (SQLite3Expression expr : func.getArgs()) {
+        //     visit(expr);
+        // }
     }
 
     @Override
     public void visit(MatchOperation match) {
         // print(match);
-        visit(match.getLeft());
-        visit(match.getRight());
+        // visit(match.getLeft());
+        // visit(match.getRight());
     }
 
     @Override
     public void visit(SQLite3RowValueExpression rw) {
         // print(rw);
-        for (SQLite3Expression expr : rw.getExpressions()) {
-            visit(expr);
-        }
+        // for (SQLite3Expression expr : rw.getExpressions()) {
+        //     visit(expr);
+        // }
     }
 
     @Override
@@ -456,8 +457,8 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     @Override
     public void visit(SQLite3SetClause set) {
         // print(set);
-        visit(set.getLeft());
-        visit(set.getRight());
+        // visit(set.getLeft());
+        // visit(set.getRight());
     }
 
 }

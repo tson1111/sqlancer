@@ -1,0 +1,119 @@
+--java.lang.AssertionError: the size of the result sets mismatch (0 and 1)!
+---- SELECT * FROM vt0 WHERE ((((((((vt0.c1)AND(vt0.c1)))AND(vt0.c0)))OR('%(')) IN (((vt0.c0)<>(vt0.c1)))));
+---- cardinality: 0
+---- SELECT DISTINCT * FROM vt0 WHERE ((((((((vt0.c1)AND(vt0.c1)))AND(vt0.c0)))OR('%(')) IN (((vt0.c0)>(vt0.c1))))) ORDER BY ((((vt0.c0)AND(vt0.c1)))<(LIKELY(vt0.c0))) ASC  NULLS LAST, CAST((~ (vt0.c0)) AS INTEGER) DESC;
+---- cardinality: 1
+--	at sqlancer.ComparatorHelper.assumeResultSetsAreSubset(ComparatorHelper.java:126)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.checkSubsetQuery(SQLite3SubsetOracle.java:244)
+--	at sqlancer.sqlite3.oracle.SQLite3SubsetOracle.check(SQLite3SubsetOracle.java:111)
+--	at sqlancer.ProviderAdapter.generateAndTestDatabase(ProviderAdapter.java:49)
+--	at sqlancer.Main$DBMSExecutor.run(Main.java:323)
+--	at sqlancer.Main$2.run(Main.java:507)
+--	at sqlancer.Main$2.runThread(Main.java:485)
+--	at sqlancer.Main$2.run(Main.java:475)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+--	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+--	at java.base/java.lang.Thread.run(Thread.java:831)
+---- Time: 2021/05/21 16:03:52
+-- Database: database7
+-- Database version: 3.34.0
+-- seed value: 1621584209265
+PRAGMA cache_size = 50000;
+PRAGMA temp_store=MEMORY;
+PRAGMA synchronous=off;
+PRAGMA case_sensitive_like=ON;
+CREATE VIRTUAL TABLE vt0 USING fts5(c0, c1 UNINDEXED, , );
+UPDATE OR IGNORE vt0 SET (c1)=(0x166bf035) WHERE x'';
+END;
+ANALYZE;
+PRAGMA main.foreign_keys;
+INSERT OR REPLACE INTO vt0 VALUES ('', 0Xffffffffc7909da8);
+PRAGMA optimize;
+INSERT OR REPLACE INTO vt0(c1) VALUES (NULL);
+INSERT OR FAIL INTO vt0(c1) VALUES ((((- (0.8432841688570419))) NOT BETWEEN ((+ (0.9505114054734222))) AND (((((0x688c9fa7)AND('')))AND(x'6b92')))));
+INSERT OR FAIL INTO vt0(c0) VALUES (0.9505114054734222), ('-946823768');
+ANALYZE vt0;
+PRAGMA threads;
+PRAGMA cache_spill;
+INSERT OR ABORT INTO vt0(c1) VALUES (x'');
+UPDATE OR ABORT vt0 SET (c0, c1)=(-9.46823768E8, 88661775) WHERE (((vt0.c0) IS FALSE) IN (vt0.c1 COLLATE BINARY));
+INSERT OR ROLLBACK INTO vt0 VALUES (x'', 0.6765570224191592), ('', '1e500'), (NULL, '1476060886');
+PRAGMA wal_checkpoint(TRUNCATE);
+INSERT OR REPLACE INTO vt0(c0) VALUES (88661775), (x'4cbc'), ('{');
+INSERT OR IGNORE INTO vt0 VALUES ('-946823768', NULL);
+UPDATE OR IGNORE vt0 SET (c0)=('2089623312') WHERE TOTAL_CHANGES();
+INSERT OR FAIL INTO vt0 VALUES (0.9505114054734222, -1);
+ROLLBACK TRANSACTION;
+COMMIT TRANSACTION;
+PRAGMA automatic_index = false;
+INSERT OR FAIL INTO vt0(c1, c0) VALUES ('', '嵡');
+ANALYZE sqlite_master;
+ROLLBACK TRANSACTION;
+CREATE TEMP VIEW v0(c0) AS SELECT DISTINCT ABS(DISTINCT MAX(vt0.c1)) FROM vt0 WHERE ((((((((0.6860062582966082 IN ('')))OR(((x'c388')LIKE(0.6860062582966082)))))OR(((x'3d') BETWEEN (NULL) AND (x'f5675709')))))AND(CAST('-381253965' AS TEXT))));
+UPDATE OR IGNORE vt0 SET c1 = '-1156268809', c0 = NULL, c0 = 1483256069;
+PRAGMA temp.foreign_keys;
+UPDATE OR IGNORE vt0 SET (c0)=(x'b8');
+END TRANSACTION;
+INSERT INTO vt0(vt0) VALUES('rebuild');
+PRAGMA main.soft_heap_limit = 1483256069;
+UPDATE vt0 SET c1 = ',K', c1 = x'c0ac35ed';
+UPDATE OR ROLLBACK vt0 SET (c0)=('1997939724') WHERE ((CASE WHEN vt0.c0 THEN vt0.c0 WHEN vt0.c1 THEN vt0.c1 END) NOT NULL);
+UPDATE vt0 SET (c0)=(x'');
+UPDATE OR IGNORE vt0 SET (c1, c0)=(NULL, 'b');
+INSERT OR FAIL INTO vt0(c1) VALUES (0.6683945485020383), (0.13391605107016635);
+UPDATE vt0 SET (c0)=(x'5f');
+END TRANSACTION;
+INSERT OR ROLLBACK INTO vt0(c1, c0) VALUES ('', '0.0'), ('1997939724', 0X688c9fa7);
+UPDATE OR IGNORE vt0 SET (c0)=(0.794972013574164) WHERE (CASE NULL  WHEN vt0.c0 THEN vt0.c1 WHEN vt0.c0 THEN vt0.c1 END IN ());
+INSERT INTO vt0(vt0, rank) VALUES('crisismerge', 1042041975);
+PRAGMA main.journal_mode = TRUNCATE;
+UPDATE vt0 SET c0 = 0.3370679796251711, c0 = x'f35500';
+INSERT OR ABORT INTO vt0(c0) VALUES ('L');
+PRAGMA main.application_id;
+PRAGMA main.locking_mode;
+UPDATE vt0 SET (c0)=(NULL) WHERE (NOT (vt0.c0)) COLLATE RTRIM;
+PRAGMA default_cache_size = 1979181483;
+INSERT OR FAIL INTO vt0(c0) VALUES (0.31607420742672443);
+ANALYZE vt0;
+PRAGMA soft_heap_limit;
+PRAGMA temp.soft_heap_limit = 376172597;
+UPDATE OR IGNORE vt0 SET (c1, c0)=(x'', '1979181483');
+UPDATE OR ABORT vt0 SET (c0, c1)=(0.2880253961481235, NULL) WHERE ((((vt0.c0) NOTNULL)) ISNULL);
+PRAGMA default_cache_size;
+UPDATE OR ABORT vt0 SET c0 = x'4c750cce';
+BEGIN  TRANSACTION;
+UPDATE OR IGNORE vt0 SET (c1, c1)=(1.483256069E9, 1343764081);
+ANALYZE;
+ANALYZE sqlite_master;
+INSERT OR IGNORE INTO vt0(c0) VALUES ('-633986091'), ('88661775');
+INSERT OR IGNORE INTO vt0(c0, c1) VALUES (1.979181483E9, x'');
+ANALYZE;
+INSERT OR REPLACE INTO vt0 VALUES ('0.6683945485020383', ''), ('2089623312', 0.5586971102446466);
+COMMIT TRANSACTION;
+INSERT OR IGNORE INTO vt0(c1) VALUES (8.8661775E7), ('-1182321550');
+ANALYZE temp;
+UPDATE vt0 SET c1 = '6Ej';
+ROLLBACK TRANSACTION;
+INSERT OR IGNORE INTO vt0(c1) VALUES ('1343764081'), (0.3237419786205863);
+UPDATE OR IGNORE vt0 SET (c0, c1)=(2.089623312E9, NULL) WHERE ((x'' COLLATE BINARY) BETWEEN ((vt0.c0 IN (vt0.c0, vt0.c0))) AND ((vt0.c1 IN (vt0.c1))));
+UPDATE OR IGNORE vt0 SET c1 = NULL, c1 = 0.45592362855265545;
+UPDATE vt0 SET c0 = x'fd4b', c0 = 0.5455776740748826;
+UPDATE OR IGNORE vt0 SET (c0)=(0x7716240c) WHERE 0.6765570224191592;
+UPDATE vt0 SET (c0, c0)=('1343764081', x'15b5') WHERE (((vt0.c1, vt0.c0, vt0.c1, vt0.c0)) BETWEEN ((((((((((((vt0.c0)OR('l')))AND(vt0.c1)))AND(vt0.c0)))OR(vt0.c0)))AND(vt0.c0)), ((((((((((((vt0.c1)OR(vt0.c1)))OR(vt0.c0)))OR(vt0.c0)))AND(vt0.c1)))AND(vt0.c1)))AND(vt0.c1)), '1754046375', ((vt0.c0) ISNULL))) AND ((((((((((((vt0.c0)AND(vt0.c0)))OR(vt0.c0)))OR(vt0.c0)))AND(vt0.c0)))OR(vt0.c0)), (((vt0.c0)) NOT BETWEEN ((vt0.c1)) AND ((vt0.c0))), ((vt0.c0)IS NOT(vt0.c0)), CASE vt0.c0  WHEN vt0.c1 THEN vt0.c0 WHEN vt0.c1 THEN vt0.c1 WHEN vt0.c1 THEN vt0.c1 ELSE vt0.c0 END)));
+UPDATE OR IGNORE vt0 SET c1 = 1.754046375E9, c1 = '-633986091' WHERE ((((((((((vt0.c1)AND('l')))AND(vt0.c1)))AND(vt0.c1)))OR(vt0.c1)))|(LIKELY(vt0.c0)));
+PRAGMA mmap_size = 3629738232322401815;
+COMMIT;
+INSERT OR ABORT INTO vt0(c1, c0) VALUES (x'a1', 0x18583886), (0.09110655698611259, 0.27784410882748767);
+PRAGMA main.optimize;
+UPDATE OR IGNORE vt0 SET (c0, c0, c1)=(x'95e3', 0.5586971102446466, NULL) WHERE (json_quote(vt0.c0) IN (CASE vt0.c0  WHEN vt0.c1 THEN vt0.c1 WHEN vt0.c1 THEN vt0.c0 WHEN 0.5521120221552444 THEN 0.13254311701175492 WHEN vt0.c1 THEN vt0.c1 END));
+UPDATE OR IGNORE vt0 SET (c0, c1)=(x'', NULL);
+UPDATE vt0 SET (c0)=(1483256069);
+ANALYZE vt0;
+END;
+INSERT OR IGNORE INTO vt0(c0, c1) VALUES ('''', 0x3007a70);
+COMMIT TRANSACTION;
+ROLLBACK TRANSACTION;
+-- SELECT * FROM vt0 WHERE ((((((((vt0.c1)AND(vt0.c1)))AND(vt0.c0)))OR('%(')) IN (((vt0.c0)<>(vt0.c1)))));
+-- cardinality: 0
+-- SELECT DISTINCT * FROM vt0 WHERE ((((((((vt0.c1)AND(vt0.c1)))AND(vt0.c0)))OR('%(')) IN (((vt0.c0)>(vt0.c1))))) ORDER BY ((((vt0.c0)AND(vt0.c1)))<(LIKELY(vt0.c0))) ASC  NULLS LAST, CAST((~ (vt0.c0)) AS INTEGER) DESC;
+-- cardinality: 1
