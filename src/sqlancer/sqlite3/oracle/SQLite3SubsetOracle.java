@@ -1,10 +1,13 @@
 package sqlancer.sqlite3.oracle;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 import sqlancer.ComparatorHelper;
 import sqlancer.IgnoreMeException;
@@ -60,7 +63,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         LIMIT,
         INTERSECT
     }
-    private int subsetConfig;
+    private List<Double> subsetConfig;
 
 
     public SQLite3SubsetOracle(SQLite3GlobalState globalState) {
@@ -77,11 +80,26 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
         errors.add("unable to use function MATCH in the requested context");
     }
 
+    private void readOptions(String path) throws IOException {
+        subsetConfig = new ArrayList<>();
+        File inFile = new File(path);
+		BufferedReader reader = new BufferedReader(new FileReader(inFile));
+
+		String line = reader.readLine();
+        String[] splitline = line.split(",");
+        int Dim = splitline.length;
+        for (int i = 0; i < Dim; i++) {
+            subsetConfig.add(Double.valueOf(splitline[i]));
+        }
+			
+		//close
+		reader.close();
+    }
+
     @Override
-    public void check() throws SQLException {
+    public void check() throws SQLException, IOException {
         // set subset combination strategy
-        Random rand = new Random();
-        subsetConfig = rand.nextInt(1 << 14); // dependent to the number of MutationOperatorType
+        readOptions(state.getOptions().getOptionsPath());
 
         SQLite3Tables randomTables = s.getRandomTableNonEmptyTables();
         List<SQLite3Column> columns = randomTables.getColumns();
@@ -131,7 +149,7 @@ public class SQLite3SubsetOracle extends SubsetBase<SQLite3GlobalState> implemen
     }
 
     private boolean checkCanMutate(MutationOperatorType t) {
-        return ((1 << (t.ordinal())) & subsetConfig) != 0;
+        return Math.random() <=  subsetConfig.get(t.ordinal());
     }
 
     private void getSubsetQuery(SQLite3Select select, SQLite3Expression randomWhereCondition, List<Join> joinStatements) throws SQLException {

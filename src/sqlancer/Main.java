@@ -425,12 +425,14 @@ public final class Main {
                     public void run() {
                         System.out.println("Overall execution statistics");
                         System.out.println("============================");
-                        System.out.println(formatInteger(nrQueries.get()) + " queries");
-                        System.out.println(formatInteger(nrDatabases.get()) + " databases");
+                        System.out.println("databases: " + String.format("%,10d", nrDatabases.get()));
                         System.out.println(
                                 formatInteger(nrSuccessfulActions.get()) + " successfully-executed statements");
                         System.out.println(
                                 formatInteger(nrUnsuccessfulActions.get()) + " unsuccessfuly-executed statements");
+                        System.out.println("queries: " + String.format("%10d", nrQueries.get()));
+                        System.out.println("bugs: " + String.format("%10d", threadsShutdown));
+                        System.out.println(String.format("%10d", nrQueries.get()) + "," + String.format("%10d", threadsShutdown));
                     }
 
                     private String formatInteger(long intValue) {

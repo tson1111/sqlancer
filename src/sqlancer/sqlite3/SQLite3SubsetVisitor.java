@@ -1,15 +1,14 @@
 package sqlancer.sqlite3;
 
 import java.util.Random;
+import java.util.List;
 
 import sqlancer.Randomly;
-import sqlancer.SQLConnection;
 import sqlancer.sqlite3.ast.SQLite3Aggregate;
 import sqlancer.sqlite3.ast.SQLite3Case.CasePair;
 import sqlancer.sqlite3.ast.SQLite3Case.SQLite3CaseWithBaseExpression;
 import sqlancer.sqlite3.ast.SQLite3Case.SQLite3CaseWithoutBaseExpression;
 import sqlancer.sqlite3.ast.SQLite3Constant.SQLite3TextConstant;
-import sqlancer.sqlite3.ast.SQLite3Cast;
 import sqlancer.sqlite3.ast.SQLite3Constant;
 import sqlancer.sqlite3.ast.SQLite3Expression;
 import sqlancer.sqlite3.ast.SQLite3Expression.BetweenOperation;
@@ -46,10 +45,10 @@ import sqlancer.sqlite3.schema.SQLite3DataType;
 public class SQLite3SubsetVisitor implements SQLite3Visitor {
 
     // private final StringBuilder sb = new StringBuilder();
-    private int subsetConfig;
+    private List<Double> subsetConfig;
     private boolean subset; // true means subset, false means superset
     private boolean checkCanMutate(MutationOperatorType t) {
-        return ((1 << (t.ordinal())) & subsetConfig) != 0;
+        return Math.random() <=  subsetConfig.get(t.ordinal());
     }
     private enum MutationOperatorType {
         SMALLEREQ_SUBSTITUE, // <= to < or ==
@@ -70,7 +69,7 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         INTERSECT
     }
 
-    public SQLite3SubsetVisitor(boolean subset_, int subsetConfig_) {
+    public SQLite3SubsetVisitor(boolean subset_, List<Double> subsetConfig_) {
         this.subset = subset_;
         this.subsetConfig = subsetConfig_;
     }
@@ -158,11 +157,9 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
     public void visit(SQLite3UnaryOperation exp) {
         // print(exp);
         SQLite3UnaryOperation.UnaryOperator op = exp.getOperation();
-        if (op == SQLite3UnaryOperation.UnaryOperator.NOT || op == SQLite3UnaryOperation.UnaryOperator.NEGATE) {
+        if (op == SQLite3UnaryOperation.UnaryOperator.NOT) {
             subset = !subset;
-        }
-        visit(exp.getExpression());
-        if (op == SQLite3UnaryOperation.UnaryOperator.NOT || op == SQLite3UnaryOperation.UnaryOperator.NEGATE) {
+            visit(exp.getExpression());
             subset = !subset;
         }
     }

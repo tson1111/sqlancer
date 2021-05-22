@@ -43,6 +43,9 @@ public class MainOptions {
     @Parameter(names = "--log-execution-time", description = "Logs the execution time of each statement (requires --log-each-select to be enabled)", arity = 1)
     private boolean logExecutionTime = true; // NOPMD
 
+    @Parameter(names = "--options-path", description = "Parameters for Subset Mutation Operators")
+    private String optionsPath; // NOPMD
+
     @Parameter(names = "--username", description = "The user name used to log into the DBMS")
     private String userName = "sqlancer"; // NOPMD
 
@@ -129,6 +132,10 @@ public class MainOptions {
             throw new AssertionError();
         }
         return logExecutionTime;
+    }
+
+    public String getOptionsPath() {
+        return optionsPath;
     }
 
     public int getNrQueries() {
