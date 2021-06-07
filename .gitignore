@@ -1,3 +1,5 @@
+strategy/options
+strategy/expr/
 target/
 .idea/
 .classpath

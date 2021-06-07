@@ -242,10 +242,22 @@ public class SQLite3SubsetVisitor implements SQLite3Visitor {
         SQLite3Constant c = (SQLite3Constant)right;
         if (c.getDataType() == SQLite3DataType.INT) {
             long v = c.asInt();
-            return (SQLite3Expression)SQLite3Constant.createIntConstant(v + minus * Randomly.smallNumber());
+            long v_smaller = v + minus * Randomly.smallNumber();
+            if ((smaller && v_smaller <= v) || (!smaller && v_smaller >= v)) {
+                // prevent overflow
+                return (SQLite3Expression)SQLite3Constant.createIntConstant(v_smaller);
+            } else {
+                return right;
+            }
         } else {
             double v = c.asDouble();
-            return (SQLite3Expression)SQLite3Constant.createRealConstant(v + minus * Randomly.smallNumber());
+            double v_smaller = v + minus * Randomly.smallNumber();
+            if ((smaller && v_smaller <= v) || (!smaller && v_smaller >= v)) {
+                // prevent overflow
+                return (SQLite3Expression)SQLite3Constant.createRealConstant(v_smaller);
+            } else {
+                return right;
+            }
         }
     }
 

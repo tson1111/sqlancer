@@ -1,0 +1,1620 @@
+[2021/05/22 18:31:20] Executed 27484 queries (5493 queries/s; 0.80/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:31:25] Executed 79565 queries (10428 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:31:30] Executed 132779 queries (10642 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:31:35] Executed 185951 queries (10645 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:31:40] Executed 239257 queries (10654 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:31:45] Executed 284388 queries (9029 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:31:50] Executed 327921 queries (8708 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:31:55] Executed 378264 queries (10066 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:32:00] Executed 428332 queries (10011 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:32:05] Executed 478597 queries (10063 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:32:10] Executed 528198 queries (9912 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:32:15] Executed 570945 queries (8557 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,345k successfully-executed statements
+      251k unsuccessfuly-executed statements
+queries:     578557
+bugs:          0
+    578557,         0
+[2021/05/22 18:32:21] Executed 49294 queries (9850 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:26] Executed 125979 queries (15346 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:31] Executed 202993 queries (15390 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:36] Executed 275793 queries (14565 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:41] Executed 340966 queries (13034 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:46] Executed 409983 queries (13811 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:51] Executed 500161 queries (18024 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:32:56] Executed 582478 queries (16463 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:33:01] Executed 655142 queries (14532 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:33:06] Executed 732132 queries (15407 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:33:11] Executed 822916 queries (18149 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:33:16] Executed 896604 queries (14743 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         14
+    1,997k successfully-executed statements
+      280k unsuccessfuly-executed statements
+queries:     904269
+bugs:          0
+    904270,         0
+[2021/05/22 18:33:22] Executed 48684 queries (9727 queries/s; 0.80/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:27] Executed 119031 queries (14066 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:32] Executed 188851 queries (13972 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:37] Executed 247497 queries (11726 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:42] Executed 301713 queries (10845 queries/s; 0.40/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:47] Executed 354393 queries (10536 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:52] Executed 414078 queries (11937 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:33:57] Executed 470192 queries (11227 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:34:02] Executed 526893 queries (11335 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:34:07] Executed 580896 queries (10800 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:34:12] Executed 636839 queries (11186 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:34:17] Executed 697986 queries (12239 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,686k successfully-executed statements
+      373k unsuccessfuly-executed statements
+queries:     701291
+bugs:          0
+    701291,         0
+[2021/05/22 18:34:23] Executed 13835 queries (2764 queries/s; 0.80/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:28] Executed 35265 queries (4289 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:33] Executed 56372 queries (4221 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:38] Executed 77013 queries (4128 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:43] Executed 95517 queries (3698 queries/s; 0.40/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:48] Executed 113699 queries (3637 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:53] Executed 134328 queries (4124 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:34:58] Executed 156765 queries (4490 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:35:03] Executed 177709 queries (4187 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:35:08] Executed 197824 queries (4026 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:35:13] Executed 217020 queries (3835 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:35:18] Executed 236411 queries (3880 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,157k successfully-executed statements
+      770k unsuccessfuly-executed statements
+queries:     238853
+bugs:          0
+    238853,         0
+[2021/05/22 18:35:24] Executed 41447 queries (8282 queries/s; 0.80/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:35:29] Executed 115280 queries (14763 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:35:34] Executed 188520 queries (14659 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:35:39] Executed 256756 queries (13647 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:35:44] Executed 308405 queries (10329 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:35:49] Executed 371375 queries (12594 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:35:54] Executed 441320 queries (13989 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:35:59] Executed 503734 queries (12482 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:36:04] Executed 560060 queries (11262 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:36:09] Executed 612851 queries (10556 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:36:14] Executed 670329 queries (11497 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:36:19] Executed 720894 queries (10104 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,693k successfully-executed statements
+      323k unsuccessfuly-executed statements
+queries:     726958
+bugs:          0
+    726959,         0
+[2021/05/22 18:36:25] Executed 59408 queries (11864 queries/s; 0.80/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:36:30] Executed 150756 queries (18284 queries/s; 0.00/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:36:35] Executed 241025 queries (18035 queries/s; 0.00/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:36:40] Executed 319428 queries (15693 queries/s; 0.40/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:36:45] Executed 386696 queries (13450 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:36:50] Executed 478738 queries (18426 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:36:55] Executed 566607 queries (17573 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:37:00] Executed 647627 queries (16191 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:37:05] Executed 719969 queries (14479 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:37:10] Executed 806414 queries (17282 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:37:15] Executed 882191 queries (15164 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:37:20] Executed 953148 queries (14182 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         14
+    2,128k successfully-executed statements
+      304k unsuccessfuly-executed statements
+queries:     964209
+bugs:          0
+    964210,         0
+[2021/05/22 18:37:26] Executed 43005 queries (8590 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:37:31] Executed 113086 queries (14019 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:37:36] Executed 181652 queries (13713 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:37:41] Executed 234665 queries (10602 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:37:46] Executed 287160 queries (10501 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:37:51] Executed 330705 queries (8710 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:37:56] Executed 399119 queries (13682 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:38:01] Executed 462162 queries (12608 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:38:06] Executed 521813 queries (11930 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:38:11] Executed 564013 queries (8440 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:38:16] Executed 612272 queries (9651 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:38:21] Executed 666137 queries (10773 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,616k successfully-executed statements
+      358k unsuccessfuly-executed statements
+queries:     672993
+bugs:          0
+    672994,         0
+[2021/05/22 18:38:27] Executed 14633 queries (2922 queries/s; 0.80/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:32] Executed 36987 queries (4475 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:37] Executed 59049 queries (4410 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:42] Executed 80080 queries (4208 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:47] Executed 98567 queries (3698 queries/s; 0.40/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:52] Executed 121955 queries (4677 queries/s; 0.20/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:38:57] Executed 145813 queries (4767 queries/s; 0.00/s dbs, successful statements: 60%). Threads shut down: 0.
+[2021/05/22 18:39:02] Executed 166233 queries (4086 queries/s; 0.40/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:39:07] Executed 185037 queries (3760 queries/s; 0.40/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:39:12] Executed 204752 queries (3943 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:39:17] Executed 224535 queries (3951 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:39:22] Executed 244067 queries (3910 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,197k successfully-executed statements
+      800k unsuccessfuly-executed statements
+queries:     246269
+bugs:          0
+    246269,         0
+[2021/05/22 18:39:28] Executed 49266 queries (9839 queries/s; 0.80/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:33] Executed 129162 queries (15982 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:38] Executed 209521 queries (16071 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:43] Executed 263018 queries (10699 queries/s; 0.60/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:48] Executed 334197 queries (14235 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:53] Executed 406034 queries (14367 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:39:58] Executed 469722 queries (12737 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:40:03] Executed 536318 queries (13321 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:40:08] Executed 613418 queries (15420 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:40:13] Executed 682835 queries (13880 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:40:18] Executed 731900 queries (9814 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:40:23] Executed 787868 queries (11193 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         14
+    1,846k successfully-executed statements
+      342k unsuccessfuly-executed statements
+queries:     795607
+bugs:          0
+    795608,         0
+[2021/05/22 18:40:29] Executed 49806 queries (9949 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:34] Executed 128991 queries (15840 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:39] Executed 208538 queries (15909 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:44] Executed 276926 queries (13677 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:49] Executed 337235 queries (12061 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:54] Executed 398482 queries (12249 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:40:59] Executed 475338 queries (15374 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:41:04] Executed 553777 queries (15687 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:41:09] Executed 623341 queries (13912 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:41:14] Executed 668452 queries (9022 queries/s; 0.60/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:41:19] Executed 727249 queries (11759 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:41:24] Executed 785504 queries (11651 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,752k successfully-executed statements
+      248k unsuccessfuly-executed statements
+queries:     792071
+bugs:          0
+    792071,         0
+[2021/05/22 18:41:29] Executed 34853 queries (6962 queries/s; 0.80/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:34] Executed 95618 queries (12160 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:39] Executed 157000 queries (12281 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:44] Executed 218255 queries (12251 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:49] Executed 268342 queries (10017 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:54] Executed 316276 queries (9582 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:41:59] Executed 367255 queries (10195 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:42:04] Executed 425722 queries (11691 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:42:09] Executed 479356 queries (10731 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:42:14] Executed 536366 queries (11406 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:42:19] Executed 582665 queries (9257 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:42:24] Executed 632665 queries (10000 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,549k successfully-executed statements
+      353k unsuccessfuly-executed statements
+queries:     643695
+bugs:          0
+    643695,         0
+[2021/05/22 18:42:31] Executed 10295 queries (2056 queries/s; 0.80/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:42:36] Executed 26007 queries (3143 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:42:41] Executed 41468 queries (3092 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:42:46] Executed 57317 queries (3169 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:42:51] Executed 73230 queries (3183 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:42:56] Executed 88269 queries (3008 queries/s; 0.20/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:01] Executed 102881 queries (2922 queries/s; 0.40/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:06] Executed 119438 queries (3311 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:11] Executed 135135 queries (3139 queries/s; 0.20/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:16] Executed 153029 queries (3583 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:21] Executed 170717 queries (3537 queries/s; 0.00/s dbs, successful statements: 59%). Threads shut down: 0.
+[2021/05/22 18:43:26] Executed 185846 queries (3025 queries/s; 0.40/s dbs, successful statements: 59%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+      913k successfully-executed statements
+      617k unsuccessfuly-executed statements
+queries:     187819
+bugs:          0
+    187820,         0
+[2021/05/22 18:43:32] Executed 41658 queries (8323 queries/s; 0.80/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:43:37] Executed 107365 queries (13144 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:43:42] Executed 172725 queries (13072 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:43:47] Executed 231097 queries (11674 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:43:52] Executed 285537 queries (10888 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:43:57] Executed 342006 queries (11293 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:02] Executed 401731 queries (11945 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:07] Executed 457617 queries (11177 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:12] Executed 510202 queries (10519 queries/s; 0.40/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:17] Executed 574644 queries (12888 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:22] Executed 630513 queries (11173 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:44:27] Executed 687207 queries (11338 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,611k successfully-executed statements
+      308k unsuccessfuly-executed statements
+queries:     692939
+bugs:          0
+    692939,         0
+[2021/05/22 18:44:32] Executed 34062 queries (6808 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:44:37] Executed 84728 queries (10139 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:44:42] Executed 134406 queries (9937 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:44:47] Executed 184096 queries (9934 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:44:52] Executed 224963 queries (8176 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:44:57] Executed 272628 queries (9531 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:02] Executed 313607 queries (8195 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:07] Executed 357167 queries (8706 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:12] Executed 397107 queries (7980 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:17] Executed 430025 queries (6583 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:22] Executed 458692 queries (5733 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:45:27] Executed 488597 queries (5982 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,090k successfully-executed statements
+      157k unsuccessfuly-executed statements
+queries:     491912
+bugs:          0
+    491913,         0
+[2021/05/22 18:45:33] Executed 33887 queries (6770 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:45:38] Executed 86144 queries (10443 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:45:43] Executed 137356 queries (10240 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:45:48] Executed 188430 queries (10227 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:45:53] Executed 231394 queries (8584 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:45:58] Executed 274783 queries (8676 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:03] Executed 316635 queries (8377 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:08] Executed 353063 queries (7295 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:13] Executed 400096 queries (9397 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:18] Executed 456274 queries (11226 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:23] Executed 513125 queries (11383 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:46:28] Executed 566782 queries (10737 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,388k successfully-executed statements
+      321k unsuccessfuly-executed statements
+queries:     572012
+bugs:          0
+    572012,         0
+[2021/05/22 18:46:34] Executed 26176 queries (5225 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:46:39] Executed 64270 queries (7620 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:46:44] Executed 102683 queries (7684 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:46:49] Executed 140919 queries (7647 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:46:54] Executed 176690 queries (7154 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:46:59] Executed 211659 queries (6993 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:04] Executed 237978 queries (5263 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:09] Executed 263709 queries (5146 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:14] Executed 289908 queries (5239 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:19] Executed 320433 queries (6105 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:24] Executed 350848 queries (6075 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:47:29] Executed 381427 queries (6123 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,092k successfully-executed statements
+      388k unsuccessfuly-executed statements
+queries:     385930
+bugs:          0
+    385930,         0
+[2021/05/22 18:47:35] Executed 43136 queries (8618 queries/s; 0.80/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:47:40] Executed 113247 queries (14030 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:47:45] Executed 183466 queries (14046 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:47:50] Executed 253078 queries (13914 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:47:55] Executed 306356 queries (10655 queries/s; 0.80/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:00] Executed 371406 queries (13017 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:05] Executed 436959 queries (13115 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:10] Executed 497557 queries (12124 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:15] Executed 552971 queries (11073 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:20] Executed 605621 queries (10538 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:25] Executed 657148 queries (10297 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:48:30] Executed 703143 queries (9208 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,652k successfully-executed statements
+      319k unsuccessfuly-executed statements
+queries:     708953
+bugs:          0
+    708954,         0
+[2021/05/22 18:48:36] Executed 46398 queries (9274 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:48:41] Executed 114021 queries (13521 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:48:46] Executed 181602 queries (13516 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:48:51] Executed 243448 queries (12376 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:48:56] Executed 298731 queries (11047 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:01] Executed 358922 queries (12038 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:06] Executed 423489 queries (12921 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:11] Executed 487031 queries (12708 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:16] Executed 550486 queries (12691 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:21] Executed 608110 queries (11531 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:26] Executed 658911 queries (10150 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:49:31] Executed 709932 queries (10212 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,583k successfully-executed statements
+      227k unsuccessfuly-executed statements
+queries:     716025
+bugs:          0
+    716025,         0
+[2021/05/22 18:49:37] Executed 42529 queries (8493 queries/s; 0.80/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:49:42] Executed 106785 queries (12866 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:49:47] Executed 170734 queries (12787 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:49:52] Executed 230356 queries (11926 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:49:57] Executed 280968 queries (10118 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:02] Executed 319833 queries (7776 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:07] Executed 365511 queries (9128 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:12] Executed 410954 queries (9094 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:17] Executed 451877 queries (8187 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:22] Executed 498526 queries (9320 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:27] Executed 543656 queries (9026 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:50:32] Executed 603481 queries (11967 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,467k successfully-executed statements
+      332k unsuccessfuly-executed statements
+queries:     610487
+bugs:          0
+    610488,         0
+[2021/05/22 18:50:38] Executed 32396 queries (6476 queries/s; 0.80/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:50:43] Executed 79032 queries (9338 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:50:48] Executed 126168 queries (9419 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:50:53] Executed 172806 queries (9335 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:50:58] Executed 211572 queries (7753 queries/s; 0.60/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:51:03] Executed 256822 queries (9050 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:51:08] Executed 297333 queries (8095 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:51:13] Executed 345787 queries (9696 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:51:18] Executed 388094 queries (8461 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:51:23] Executed 428951 queries (8171 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:51:28] Executed 474811 queries (9172 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:51:33] Executed 516101 queries (8258 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,478k successfully-executed statements
+      527k unsuccessfuly-executed statements
+queries:     521073
+bugs:          0
+    521073,         0
+[2021/05/22 18:51:39] Executed 44064 queries (8802 queries/s; 0.80/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:51:44] Executed 113478 queries (13885 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:51:49] Executed 182370 queries (13778 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:51:54] Executed 244686 queries (12463 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:51:59] Executed 298886 queries (10840 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:04] Executed 365074 queries (13237 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:09] Executed 428761 queries (12739 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:14] Executed 502373 queries (14722 queries/s; 0.00/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:19] Executed 569484 queries (13422 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:24] Executed 654487 queries (17000 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:29] Executed 725872 queries (14277 queries/s; 0.20/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 18:52:34] Executed 790205 queries (12866 queries/s; 0.40/s dbs, successful statements: 84%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         14
+    1,858k successfully-executed statements
+      348k unsuccessfuly-executed statements
+queries:     800356
+bugs:          0
+    800357,         0
+[2021/05/22 18:52:40] Executed 53936 queries (10778 queries/s; 0.80/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:52:45] Executed 137984 queries (16799 queries/s; 0.00/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:52:50] Executed 220444 queries (16465 queries/s; 0.00/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:52:55] Executed 289650 queries (13863 queries/s; 0.40/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:53:00] Executed 356751 queries (13422 queries/s; 0.20/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:53:05] Executed 432667 queries (15177 queries/s; 0.20/s dbs, successful statements: 88%). Threads shut down: 0.
+[2021/05/22 18:53:10] Executed 516183 queries (16696 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:53:15] Executed 588232 queries (14409 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:53:20] Executed 652167 queries (12797 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:53:25] Executed 721030 queries (13772 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:53:30] Executed 790027 queries (13799 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:53:35] Executed 852397 queries (12474 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         13
+    1,895k successfully-executed statements
+      260k unsuccessfuly-executed statements
+queries:     858379
+bugs:          0
+    858379,         0
+[2021/05/22 18:53:41] Executed 25599 queries (5113 queries/s; 0.80/s dbs, successful statements: 77%). Threads shut down: 0.
+[2021/05/22 18:53:46] Executed 68307 queries (8543 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:53:51] Executed 111389 queries (8616 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:53:56] Executed 155261 queries (8774 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:01] Executed 196715 queries (8290 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:06] Executed 242179 queries (9092 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:11] Executed 286454 queries (8855 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:16] Executed 341835 queries (11091 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:21] Executed 389199 queries (9480 queries/s; 0.20/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:54:26] Executed 435674 queries (9306 queries/s; 0.00/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:54:31] Executed 474954 queries (7857 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:54:36] Executed 524165 queries (9852 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,314k successfully-executed statements
+      328k unsuccessfuly-executed statements
+queries:     531042
+bugs:          0
+    531042,         0
+[2021/05/22 18:54:42] Executed 29015 queries (5792 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:54:47] Executed 76031 queries (9410 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:54:52] Executed 122064 queries (9215 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:54:57] Executed 166359 queries (8848 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:02] Executed 199900 queries (6716 queries/s; 0.60/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:07] Executed 234758 queries (6964 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:12] Executed 269298 queries (6917 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:17] Executed 302230 queries (6583 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:22] Executed 337225 queries (7003 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:27] Executed 371263 queries (6798 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:32] Executed 411312 queries (8016 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:55:37] Executed 452042 queries (8142 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,297k successfully-executed statements
+      465k unsuccessfuly-executed statements
+queries:     456512
+bugs:          0
+    456512,         0
+[2021/05/22 18:55:43] Executed 32629 queries (6521 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:55:48] Executed 82655 queries (10007 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:55:53] Executed 132119 queries (9878 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:55:58] Executed 180894 queries (9762 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:03] Executed 220207 queries (7868 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:08] Executed 260344 queries (8016 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:13] Executed 287683 queries (5475 queries/s; 0.40/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:18] Executed 317555 queries (5975 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:23] Executed 347703 queries (6029 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:28] Executed 378084 queries (6071 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:33] Executed 408239 queries (6035 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 18:56:38] Executed 431582 queries (4661 queries/s; 0.40/s dbs, successful statements: 83%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,018k successfully-executed statements
+      200k unsuccessfuly-executed statements
+queries:     436128
+bugs:          0
+    436129,         0
+[2021/05/22 18:56:43] Executed 57588 queries (11510 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:56:48] Executed 147958 queries (18055 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:56:53] Executed 236982 queries (17819 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:56:58] Executed 315264 queries (15653 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:57:03] Executed 376189 queries (12194 queries/s; 0.60/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 18:57:08] Executed 456527 queries (16061 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 18:57:13] Executed 536258 queries (15958 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 18:57:18] Executed 603349 queries (13391 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 18:57:23] Executed 666070 queries (12561 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 18:57:28] Executed 728073 queries (12385 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:57:33] Executed 797316 queries (13848 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 18:57:38] Executed 859836 queries (12519 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         13
+    1,926k successfully-executed statements
+      282k unsuccessfuly-executed statements
+queries:     870499
+bugs:          0
+    870499,         0
+[2021/05/22 18:57:45] Executed 31658 queries (6321 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 18:57:50] Executed 83236 queries (10327 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:57:55] Executed 134595 queries (10271 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:58:00] Executed 186367 queries (10354 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 18:58:05] Executed 229689 queries (8655 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:10] Executed 269360 queries (7934 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:15] Executed 308210 queries (7777 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:20] Executed 343008 queries (6952 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:25] Executed 384793 queries (8360 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:30] Executed 426229 queries (8285 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:35] Executed 465958 queries (7944 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 18:58:40] Executed 509033 queries (8623 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,239k successfully-executed statements
+      276k unsuccessfuly-executed statements
+queries:     513868
+bugs:          0
+    513868,         0
+[2021/05/22 18:58:45] Executed 22069 queries (4404 queries/s; 0.80/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:58:50] Executed 53186 queries (6234 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:58:55] Executed 84652 queries (6284 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:59:00] Executed 116066 queries (6280 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:59:05] Executed 145235 queries (5839 queries/s; 0.20/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:59:10] Executed 174610 queries (5869 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:59:15] Executed 202881 queries (5654 queries/s; 0.40/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 18:59:20] Executed 237028 queries (6840 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:59:25] Executed 269376 queries (6465 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:59:30] Executed 302847 queries (6688 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:59:35] Executed 335186 queries (6475 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 18:59:40] Executed 368661 queries (6685 queries/s; 0.20/s dbs, successful statements: 74%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,056k successfully-executed statements
+      371k unsuccessfuly-executed statements
+queries:     372898
+bugs:          0
+    372898,         0
+[2021/05/22 18:59:46] Executed 37024 queries (7388 queries/s; 0.80/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:59:51] Executed 91196 queries (10836 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 18:59:56] Executed 144389 queries (10638 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:00:01] Executed 196328 queries (10387 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:00:06] Executed 238014 queries (8338 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:00:11] Executed 275520 queries (7501 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:00:16] Executed 317964 queries (8488 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 1.
+[2021/05/22 19:00:21] Executed 365022 queries (9411 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 1.
+[2021/05/22 19:00:26] Executed 412442 queries (9484 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 1.
+[2021/05/22 19:00:31] Executed 459376 queries (9386 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 1.
+[2021/05/22 19:00:36] Executed 505410 queries (9206 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 1.
+[2021/05/22 19:00:41] Executed 543453 queries (7605 queries/s; 0.60/s dbs, successful statements: 79%). Threads shut down: 1.
+Overall execution statistics
+============================
+databases:         13
+    1,384k successfully-executed statements
+      360k unsuccessfuly-executed statements
+queries:     549292
+bugs:          1
+    549292,         1
+[2021/05/22 19:00:47] Executed 18369 queries (3667 queries/s; 0.80/s dbs, successful statements: 77%). Threads shut down: 0.
+[2021/05/22 19:00:52] Executed 47128 queries (5752 queries/s; 0.00/s dbs, successful statements: 78%). Threads shut down: 0.
+[2021/05/22 19:00:57] Executed 75700 queries (5720 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:02] Executed 104308 queries (5722 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:07] Executed 133136 queries (5762 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:12] Executed 160716 queries (5513 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:17] Executed 186163 queries (5089 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:22] Executed 213908 queries (5550 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:27] Executed 241430 queries (5505 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:32] Executed 280221 queries (7758 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:01:37] Executed 319469 queries (7849 queries/s; 0.00/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 19:01:42] Executed 358482 queries (7813 queries/s; 0.00/s dbs, successful statements: 80%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          7
+      892k successfully-executed statements
+      220k unsuccessfuly-executed statements
+queries:     362792
+bugs:          0
+    362792,         0
+[2021/05/22 19:01:48] Executed 38312 queries (7647 queries/s; 0.80/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:01:53] Executed 96614 queries (11676 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:01:58] Executed 154261 queries (11515 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:03] Executed 211659 queries (11493 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:08] Executed 264200 queries (10493 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:13] Executed 320645 queries (11304 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:18] Executed 374480 queries (10751 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:23] Executed 438159 queries (12753 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:28] Executed 489438 queries (10247 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:33] Executed 533511 queries (8809 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:38] Executed 581082 queries (9514 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:02:43] Executed 629483 queries (9680 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,528k successfully-executed statements
+      341k unsuccessfuly-executed statements
+queries:     636660
+bugs:          0
+    636661,         0
+[2021/05/22 19:02:49] Executed 28006 queries (5587 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:02:54] Executed 66778 queries (7760 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:02:59] Executed 106531 queries (7952 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:04] Executed 145887 queries (7871 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:09] Executed 185076 queries (7837 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:14] Executed 214499 queries (5884 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:19] Executed 245159 queries (6132 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:24] Executed 279407 queries (6849 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:29] Executed 313684 queries (6851 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:34] Executed 348154 queries (6894 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:39] Executed 381847 queries (6738 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:03:44] Executed 410502 queries (5731 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,172k successfully-executed statements
+      416k unsuccessfuly-executed statements
+queries:     413950
+bugs:          0
+    413950,         0
+[2021/05/22 19:03:50] Executed 26233 queries (5238 queries/s; 0.80/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:03:55] Executed 66491 queries (8053 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:00] Executed 104940 queries (7691 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:05] Executed 144434 queries (7898 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:10] Executed 180116 queries (7139 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:15] Executed 211975 queries (6370 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:20] Executed 247575 queries (7115 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:25] Executed 287808 queries (8051 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:30] Executed 326458 queries (7730 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:35] Executed 363602 queries (7428 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:40] Executed 397511 queries (6781 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:04:45] Executed 433831 queries (7266 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,103k successfully-executed statements
+      288k unsuccessfuly-executed statements
+queries:     438399
+bugs:          0
+    438399,         0
+[2021/05/22 19:04:51] Executed 30304 queries (6047 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:04:56] Executed 73793 queries (8699 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:01] Executed 117442 queries (8738 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:06] Executed 160863 queries (8687 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:11] Executed 200124 queries (7853 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:16] Executed 235875 queries (7148 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:21] Executed 270314 queries (6887 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:26] Executed 306119 queries (7161 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:31] Executed 341406 queries (7058 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:36] Executed 377303 queries (7177 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:41] Executed 412412 queries (7020 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:05:46] Executed 456283 queries (8772 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          7
+    1,023k successfully-executed statements
+      157k unsuccessfuly-executed statements
+queries:     461703
+bugs:          0
+    461705,         0
+[2021/05/22 19:05:52] Executed 28484 queries (5689 queries/s; 0.80/s dbs, successful statements: 78%). Threads shut down: 0.
+[2021/05/22 19:05:57] Executed 77291 queries (9765 queries/s; 0.00/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 19:06:02] Executed 127498 queries (10041 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:07] Executed 177843 queries (10069 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:12] Executed 228551 queries (10141 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:17] Executed 263151 queries (6920 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:22] Executed 297069 queries (6783 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:27] Executed 332053 queries (6996 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:32] Executed 373419 queries (8274 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:37] Executed 415349 queries (8386 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:42] Executed 455517 queries (8033 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:06:47] Executed 494656 queries (7827 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,204k successfully-executed statements
+      271k unsuccessfuly-executed statements
+queries:     499326
+bugs:          0
+    499327,         0
+[2021/05/22 19:06:53] Executed 29636 queries (5922 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:06:58] Executed 77119 queries (9498 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:03] Executed 122612 queries (9100 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:08] Executed 166489 queries (8778 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:13] Executed 198800 queries (6459 queries/s; 0.40/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:18] Executed 230543 queries (6347 queries/s; 0.20/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:23] Executed 263338 queries (6560 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:28] Executed 294337 queries (6199 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:07:33] Executed 325389 queries (6210 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:07:38] Executed 361770 queries (7276 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:07:43] Executed 391381 queries (5923 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:07:48] Executed 425192 queries (6766 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,218k successfully-executed statements
+      431k unsuccessfuly-executed statements
+queries:     429417
+bugs:          0
+    429417,         0
+[2021/05/22 19:07:54] Executed 28025 queries (5601 queries/s; 0.80/s dbs, successful statements: 78%). Threads shut down: 0.
+[2021/05/22 19:07:59] Executed 79424 queries (10279 queries/s; 0.00/s dbs, successful statements: 78%). Threads shut down: 0.
+[2021/05/22 19:08:04] Executed 128015 queries (9722 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:09] Executed 177288 queries (9858 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:14] Executed 218579 queries (8254 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:19] Executed 268486 queries (9975 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:24] Executed 314295 queries (9172 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:29] Executed 361971 queries (9531 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:34] Executed 415547 queries (10719 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:39] Executed 455611 queries (8012 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:44] Executed 501843 queries (9246 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:08:49] Executed 542562 queries (8147 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,382k successfully-executed statements
+      367k unsuccessfuly-executed statements
+queries:     547687
+bugs:          0
+    547687,         0
+[2021/05/22 19:08:55] Executed 39309 queries (7852 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:00] Executed 102041 queries (12551 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:05] Executed 166004 queries (12802 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:10] Executed 231069 queries (13010 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:15] Executed 287580 queries (11297 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:20] Executed 331096 queries (8704 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:25] Executed 378530 queries (9484 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:30] Executed 431395 queries (10573 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:35] Executed 484283 queries (10579 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:40] Executed 535898 queries (10323 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:45] Executed 581500 queries (9124 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:09:50] Executed 629974 queries (9696 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,414k successfully-executed statements
+      210k unsuccessfuly-executed statements
+queries:     634566
+bugs:          0
+    634567,         0
+[2021/05/22 19:09:56] Executed 33409 queries (6675 queries/s; 0.80/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:01] Executed 85094 queries (10343 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:06] Executed 136997 queries (10384 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:11] Executed 189043 queries (10402 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:16] Executed 235003 queries (9197 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:21] Executed 284590 queries (9919 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:26] Executed 332157 queries (9511 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:31] Executed 382921 queries (10154 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:36] Executed 443799 queries (12178 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:41] Executed 500434 queries (11327 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:46] Executed 556407 queries (11196 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:10:51] Executed 605678 queries (9852 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,464k successfully-executed statements
+      323k unsuccessfuly-executed statements
+queries:     609423
+bugs:          0
+    609424,         0
+[2021/05/22 19:10:57] Executed 22137 queries (4421 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:11:02] Executed 56592 queries (6899 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:11:07] Executed 90769 queries (6835 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:12] Executed 124699 queries (6786 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:17] Executed 149605 queries (4980 queries/s; 0.40/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:22] Executed 180726 queries (6226 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:27] Executed 211534 queries (6156 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:32] Executed 243000 queries (6298 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:11:37] Executed 267946 queries (4989 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:11:42] Executed 298536 queries (6113 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:11:47] Executed 334250 queries (7141 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:11:52] Executed 370189 queries (7189 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,064k successfully-executed statements
+      378k unsuccessfuly-executed statements
+queries:     374424
+bugs:          0
+    374424,         0
+[2021/05/22 19:11:58] Executed 22035 queries (4401 queries/s; 0.80/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:03] Executed 57044 queries (7003 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:08] Executed 91760 queries (6943 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:13] Executed 125076 queries (6663 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:18] Executed 150944 queries (5173 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:23] Executed 182240 queries (6260 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:28] Executed 214777 queries (6507 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:33] Executed 244237 queries (5892 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:38] Executed 270567 queries (5266 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:43] Executed 303637 queries (6614 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:48] Executed 337162 queries (6705 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:12:53] Executed 367408 queries (6049 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+      936k successfully-executed statements
+      243k unsuccessfuly-executed statements
+queries:     371723
+bugs:          0
+    371723,         0
+[2021/05/22 19:12:59] Executed 41262 queries (8242 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:04] Executed 107990 queries (13358 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:09] Executed 172930 queries (12988 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:14] Executed 240300 queries (13465 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:19] Executed 293336 queries (10613 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:24] Executed 337440 queries (8817 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:29] Executed 390098 queries (10529 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:34] Executed 443878 queries (10756 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:39] Executed 494966 queries (10215 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:44] Executed 546736 queries (10360 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:49] Executed 595475 queries (9749 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:13:54] Executed 630687 queries (7036 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,414k successfully-executed statements
+      220k unsuccessfuly-executed statements
+queries:     633203
+bugs:          0
+    633204,         0
+[2021/05/22 19:13:59] Executed 38486 queries (7686 queries/s; 0.80/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:04] Executed 94958 queries (11305 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:09] Executed 150389 queries (11086 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:14] Executed 205732 queries (11070 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:19] Executed 254673 queries (9780 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:24] Executed 308892 queries (10843 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:29] Executed 361222 queries (10474 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:34] Executed 425811 queries (12920 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:39] Executed 486906 queries (12211 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:44] Executed 534495 queries (9517 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:49] Executed 584334 queries (9971 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:14:54] Executed 632425 queries (9616 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,538k successfully-executed statements
+      342k unsuccessfuly-executed statements
+queries:     638329
+bugs:          0
+    638330,         0
+[2021/05/22 19:15:00] Executed 22445 queries (4484 queries/s; 0.80/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:15:05] Executed 56604 queries (6837 queries/s; 0.00/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:15:10] Executed 90944 queries (6862 queries/s; 0.00/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:15:15] Executed 125330 queries (6878 queries/s; 0.00/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:15:20] Executed 160077 queries (6953 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:25] Executed 191092 queries (6204 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:30] Executed 220349 queries (5850 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:35] Executed 254094 queries (6747 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:40] Executed 293776 queries (7939 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:45] Executed 332670 queries (7774 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:50] Executed 371451 queries (7760 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:15:55] Executed 403924 queries (6495 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,157k successfully-executed statements
+      420k unsuccessfuly-executed statements
+queries:     406752
+bugs:          0
+    406752,         0
+[2021/05/22 19:16:01] Executed 38003 queries (7597 queries/s; 0.80/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:06] Executed 98364 queries (12077 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:11] Executed 157782 queries (11883 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:16] Executed 217951 queries (12028 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:21] Executed 264884 queries (9392 queries/s; 0.40/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:26] Executed 311214 queries (9264 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:31] Executed 354214 queries (8603 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:36] Executed 401640 queries (9487 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:41] Executed 449379 queries (9538 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:46] Executed 495773 queries (9286 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:51] Executed 542728 queries (9392 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:16:56] Executed 588245 queries (9096 queries/s; 0.40/s dbs, successful statements: 82%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,421k successfully-executed statements
+      305k unsuccessfuly-executed statements
+queries:     594527
+bugs:          0
+    594527,         0
+[2021/05/22 19:17:02] Executed 31075 queries (6210 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:07] Executed 77723 queries (9335 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:12] Executed 123380 queries (9124 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:17] Executed 169839 queries (9299 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:22] Executed 212716 queries (8575 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:27] Executed 257176 queries (8886 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:32] Executed 308619 queries (10294 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:37] Executed 358365 queries (9949 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:42] Executed 414536 queries (11234 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:47] Executed 465092 queries (10111 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:52] Executed 509711 queries (8923 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:17:57] Executed 550630 queries (8196 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,242k successfully-executed statements
+      189k unsuccessfuly-executed statements
+queries:     556681
+bugs:          0
+    556682,         0
+[2021/05/22 19:18:03] Executed 31610 queries (6322 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 19:18:08] Executed 86183 queries (10927 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:13] Executed 137814 queries (10330 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:18] Executed 189244 queries (10294 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:23] Executed 233910 queries (8936 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:28] Executed 277263 queries (8672 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:33] Executed 325429 queries (9635 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:38] Executed 374521 queries (9818 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:43] Executed 423829 queries (9863 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:48] Executed 466355 queries (8506 queries/s; 0.40/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:53] Executed 523665 queries (11462 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:18:58] Executed 589782 queries (13223 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,437k successfully-executed statements
+      319k unsuccessfuly-executed statements
+queries:     597931
+bugs:          0
+    597932,         0
+[2021/05/22 19:19:04] Executed 23948 queries (4782 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:09] Executed 61282 queries (7477 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:14] Executed 98701 queries (7479 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:19] Executed 135787 queries (7421 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:24] Executed 168320 queries (6507 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:29] Executed 199511 queries (6238 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:34] Executed 233675 queries (6830 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:39] Executed 268523 queries (6972 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:44] Executed 302257 queries (6741 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:49] Executed 331682 queries (5883 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:54] Executed 358793 queries (5427 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:19:59] Executed 392844 queries (6807 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,126k successfully-executed statements
+      404k unsuccessfuly-executed statements
+queries:     396791
+bugs:          0
+    396791,         0
+[2021/05/22 19:20:05] Executed 33256 queries (6647 queries/s; 0.80/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:10] Executed 84855 queries (10313 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:15] Executed 137567 queries (10546 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:20] Executed 183905 queries (9269 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:25] Executed 224270 queries (8076 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:30] Executed 263577 queries (7861 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:35] Executed 308259 queries (8929 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:40] Executed 353022 queries (8952 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:45] Executed 393174 queries (8035 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:50] Executed 426011 queries (6568 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:20:55] Executed 461233 queries (7038 queries/s; 0.00/s dbs, successful statements: 82%). Threads shut down: 0.
+[2021/05/22 19:21:00] Executed 493065 queries (6367 queries/s; 0.20/s dbs, successful statements: 82%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,181k successfully-executed statements
+      248k unsuccessfuly-executed statements
+queries:     496192
+bugs:          0
+    496192,         0
+[2021/05/22 19:21:06] Executed 38918 queries (7777 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:11] Executed 94659 queries (11150 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:16] Executed 148712 queries (10819 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:21] Executed 203009 queries (10852 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:26] Executed 257165 queries (10837 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:31] Executed 295290 queries (7618 queries/s; 0.60/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:36] Executed 340548 queries (9057 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:41] Executed 386176 queries (9125 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:46] Executed 425828 queries (7927 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:51] Executed 477939 queries (10426 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:21:56] Executed 529990 queries (10406 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:22:01] Executed 577215 queries (9445 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          9
+    1,300k successfully-executed statements
+      199k unsuccessfuly-executed statements
+queries:     582920
+bugs:          0
+    582920,         0
+[2021/05/22 19:22:07] Executed 17656 queries (3528 queries/s; 0.80/s dbs, successful statements: 80%). Threads shut down: 0.
+[2021/05/22 19:22:12] Executed 45686 queries (5604 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:17] Executed 73687 queries (5605 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:22] Executed 101493 queries (5556 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:27] Executed 129481 queries (5602 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:32] Executed 158110 queries (5721 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:37] Executed 186672 queries (5718 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:42] Executed 211722 queries (5008 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:47] Executed 236004 queries (4858 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:52] Executed 260792 queries (4955 queries/s; 0.20/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:22:57] Executed 286469 queries (5138 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+[2021/05/22 19:23:02] Executed 310564 queries (4816 queries/s; 0.00/s dbs, successful statements: 81%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          7
+      756k successfully-executed statements
+      173k unsuccessfuly-executed statements
+queries:     314244
+bugs:          0
+    314244,         0
+[2021/05/22 19:23:08] Executed 27529 queries (5502 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:13] Executed 70297 queries (8553 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:18] Executed 112343 queries (8414 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:23] Executed 152136 queries (7957 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:28] Executed 188052 queries (7181 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:33] Executed 220845 queries (6563 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:38] Executed 260343 queries (7896 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:43] Executed 302886 queries (8506 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:48] Executed 345362 queries (8502 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:53] Executed 385772 queries (8080 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:23:58] Executed 420256 queries (6892 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:24:03] Executed 455916 queries (7137 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,306k successfully-executed statements
+      464k unsuccessfuly-executed statements
+queries:     461082
+bugs:          0
+    461082,         0
+[2021/05/22 19:24:09] Executed 40465 queries (8089 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:14] Executed 102451 queries (12399 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:19] Executed 165629 queries (12625 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:24] Executed 229885 queries (12856 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:29] Executed 288127 queries (11655 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:34] Executed 336356 queries (9640 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:39] Executed 391549 queries (11045 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:44] Executed 457265 queries (13132 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:49] Executed 517724 queries (12091 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:54] Executed 572794 queries (11018 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:24:59] Executed 619986 queries (9444 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:04] Executed 670661 queries (10132 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,507k successfully-executed statements
+      226k unsuccessfuly-executed statements
+queries:     676372
+bugs:          0
+    676372,         0
+[2021/05/22 19:25:10] Executed 39813 queries (7951 queries/s; 0.80/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 19:25:15] Executed 106270 queries (13294 queries/s; 0.00/s dbs, successful statements: 85%). Threads shut down: 0.
+[2021/05/22 19:25:20] Executed 173435 queries (13443 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:25] Executed 239545 queries (13227 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:30] Executed 296165 queries (11321 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:35] Executed 348389 queries (10448 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:40] Executed 408540 queries (12020 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:45] Executed 471148 queries (12531 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:25:50] Executed 532925 queries (12357 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:25:55] Executed 589398 queries (11294 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:26:00] Executed 637415 queries (9595 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:26:05] Executed 687910 queries (10107 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,551k successfully-executed statements
+      230k unsuccessfuly-executed statements
+queries:     695504
+bugs:          0
+    695505,         0
+[2021/05/22 19:26:11] Executed 21866 queries (4369 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:16] Executed 54277 queries (6480 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:21] Executed 87604 queries (6665 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:26] Executed 115879 queries (5658 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:31] Executed 143882 queries (5599 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:36] Executed 170266 queries (5277 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:41] Executed 200314 queries (6012 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:46] Executed 232337 queries (6403 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:51] Executed 267803 queries (7093 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:26:56] Executed 307638 queries (7963 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:01] Executed 346751 queries (7825 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:06] Executed 384843 queries (7616 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,099k successfully-executed statements
+      394k unsuccessfuly-executed statements
+queries:     389321
+bugs:          0
+    389321,         0
+[2021/05/22 19:27:11] Executed 24442 queries (4883 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:16] Executed 65305 queries (8174 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:21] Executed 105794 queries (8102 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:26] Executed 146868 queries (8216 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:31] Executed 183623 queries (7351 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:36] Executed 216091 queries (6492 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:41] Executed 252107 queries (7203 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:46] Executed 293713 queries (8322 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:51] Executed 335208 queries (8297 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:27:56] Executed 373493 queries (7661 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:28:01] Executed 413107 queries (7918 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:28:06] Executed 449406 queries (7264 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,294k successfully-executed statements
+      466k unsuccessfuly-executed statements
+queries:     455698
+bugs:          0
+    455698,         0
+[2021/05/22 19:28:12] Executed 50609 queries (10097 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:17] Executed 124280 queries (14754 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:22] Executed 196854 queries (14511 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:28:27] Executed 264140 queries (13465 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:28:32] Executed 318700 queries (10907 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:37] Executed 382133 queries (12696 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:42] Executed 445691 queries (12711 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:47] Executed 512501 queries (13362 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:52] Executed 569494 queries (11394 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:28:57] Executed 628539 queries (11809 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:02] Executed 689900 queries (12269 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:07] Executed 749786 queries (11977 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,690k successfully-executed statements
+      255k unsuccessfuly-executed statements
+queries:     757016
+bugs:          0
+    757016,         0
+[2021/05/22 19:29:13] Executed 35071 queries (7005 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:18] Executed 88011 queries (10596 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:23] Executed 141485 queries (10694 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:28] Executed 196630 queries (11020 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:33] Executed 248088 queries (10301 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:38] Executed 297631 queries (9902 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:29:43] Executed 351218 queries (10715 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:29:48] Executed 395728 queries (8902 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:29:53] Executed 446860 queries (10232 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:29:58] Executed 497918 queries (10203 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:30:03] Executed 557964 queries (12018 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:30:08] Executed 612870 queries (10974 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,380k successfully-executed statements
+      203k unsuccessfuly-executed statements
+queries:     620000
+bugs:          0
+    620001,         0
+[2021/05/22 19:30:14] Executed 29917 queries (5976 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:19] Executed 75715 queries (9161 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:24] Executed 120347 queries (8933 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:29] Executed 164469 queries (8819 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:34] Executed 204289 queries (7967 queries/s; 0.20/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:30:39] Executed 239054 queries (6948 queries/s; 0.60/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:44] Executed 282129 queries (8615 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:49] Executed 325368 queries (8652 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:54] Executed 367772 queries (8482 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:30:59] Executed 401357 queries (6717 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:04] Executed 432093 queries (6143 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:09] Executed 460399 queries (5664 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,311k successfully-executed statements
+      466k unsuccessfuly-executed statements
+queries:     464078
+bugs:          0
+    464078,         0
+[2021/05/22 19:31:15] Executed 28706 queries (5737 queries/s; 0.80/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:31:20] Executed 71891 queries (8638 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:25] Executed 115599 queries (8741 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:30] Executed 155497 queries (7979 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:35] Executed 196968 queries (8294 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:40] Executed 234560 queries (7518 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:31:45] Executed 277993 queries (8688 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 1.
+[2021/05/22 19:31:50] Executed 325743 queries (9550 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 1.
+[2021/05/22 19:31:55] Executed 372143 queries (9280 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 1.
+[2021/05/22 19:32:00] Executed 417026 queries (8976 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 1.
+[2021/05/22 19:32:05] Executed 455978 queries (7790 queries/s; 0.60/s dbs, successful statements: 73%). Threads shut down: 1.
+[2021/05/22 19:32:10] Executed 503581 queries (9520 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 1.
+Overall execution statistics
+============================
+databases:         12
+    1,446k successfully-executed statements
+      513k unsuccessfuly-executed statements
+queries:     509074
+bugs:          1
+    509074,         1
+[2021/05/22 19:32:16] Executed 35390 queries (7069 queries/s; 0.80/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:21] Executed 91905 queries (11305 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:26] Executed 148363 queries (11291 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:31] Executed 204703 queries (11272 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:36] Executed 254398 queries (9935 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:41] Executed 299014 queries (8923 queries/s; 0.40/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:46] Executed 353072 queries (10809 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:51] Executed 408954 queries (11183 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:32:56] Executed 471849 queries (12571 queries/s; 0.00/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:33:01] Executed 529987 queries (11627 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:33:06] Executed 585968 queries (11198 queries/s; 0.20/s dbs, successful statements: 83%). Threads shut down: 0.
+[2021/05/22 19:33:11] Executed 629935 queries (8796 queries/s; 0.40/s dbs, successful statements: 83%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,485k successfully-executed statements
+      289k unsuccessfuly-executed statements
+queries:     637281
+bugs:          0
+    637281,         0
+[2021/05/22 19:33:17] Executed 42075 queries (8403 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:33:22] Executed 105232 queries (12641 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:33:27] Executed 168908 queries (12737 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:33:32] Executed 228467 queries (11916 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:33:37] Executed 286118 queries (11523 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:33:42] Executed 348354 queries (12449 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:33:47] Executed 412624 queries (12859 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:33:52] Executed 479272 queries (13332 queries/s; 0.60/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:33:57] Executed 570044 queries (18143 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:34:02] Executed 653535 queries (16704 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:34:07] Executed 731399 queries (15569 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:34:12] Executed 786214 queries (10958 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         13
+    1,766k successfully-executed statements
+      258k unsuccessfuly-executed statements
+queries:     793014
+bugs:          0
+    793014,         0
+[2021/05/22 19:34:18] Executed 40468 queries (8082 queries/s; 0.80/s dbs, successful statements: 84%). Threads shut down: 0.
+[2021/05/22 19:34:23] Executed 103697 queries (12658 queries/s; 0.00/s dbs, successful statements: 85%). Threads shut down: 0.
+[2021/05/22 19:34:28] Executed 167111 queries (12687 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:33] Executed 229177 queries (12413 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:38] Executed 280945 queries (10345 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:43] Executed 330414 queries (9891 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:48] Executed 388368 queries (11595 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:53] Executed 440800 queries (10482 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:34:58] Executed 497053 queries (11239 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:35:03] Executed 532612 queries (7121 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:35:08] Executed 574428 queries (8359 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:35:13] Executed 616320 queries (8378 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,391k successfully-executed statements
+      218k unsuccessfuly-executed statements
+queries:     621087
+bugs:          0
+    621087,         0
+[2021/05/22 19:35:19] Executed 26535 queries (5302 queries/s; 0.80/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:24] Executed 66030 queries (7902 queries/s; 0.00/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:29] Executed 106339 queries (8063 queries/s; 0.00/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:34] Executed 144756 queries (7684 queries/s; 0.00/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:39] Executed 178974 queries (6840 queries/s; 0.40/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:44] Executed 213753 queries (6958 queries/s; 0.20/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:49] Executed 246731 queries (6596 queries/s; 0.20/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:54] Executed 285071 queries (7661 queries/s; 0.00/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:35:59] Executed 321015 queries (7193 queries/s; 0.20/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:36:04] Executed 349331 queries (5660 queries/s; 0.20/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:36:09] Executed 378553 queries (5846 queries/s; 0.00/s dbs, successful statements: 71%). Threads shut down: 0.
+[2021/05/22 19:36:14] Executed 405459 queries (5381 queries/s; 0.20/s dbs, successful statements: 71%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,246k successfully-executed statements
+      500k unsuccessfuly-executed statements
+queries:     408887
+bugs:          0
+    408887,         0
+[2021/05/22 19:36:20] Executed 25915 queries (5174 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:25] Executed 62158 queries (7251 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:30] Executed 98562 queries (7286 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:35] Executed 135734 queries (7434 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:40] Executed 174012 queries (7649 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:45] Executed 212228 queries (7647 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:50] Executed 250379 queries (7630 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:36:55] Executed 279750 queries (5871 queries/s; 0.60/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:00] Executed 309794 queries (6008 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:05] Executed 339704 queries (5982 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:10] Executed 369241 queries (5910 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:15] Executed 398414 queries (5833 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:          7
+      893k successfully-executed statements
+      130k unsuccessfuly-executed statements
+queries:     401667
+bugs:          0
+    401667,         0
+[2021/05/22 19:37:21] Executed 49286 queries (9843 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:37:26] Executed 123091 queries (14763 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:37:31] Executed 197010 queries (14783 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:37:36] Executed 270720 queries (14750 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:37:41] Executed 326709 queries (11191 queries/s; 0.60/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:37:46] Executed 389495 queries (12557 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:51] Executed 461460 queries (14393 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:37:56] Executed 533499 queries (14419 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:01] Executed 593192 queries (11938 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:06] Executed 646441 queries (10651 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:11] Executed 699059 queries (10521 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:16] Executed 752246 queries (10631 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,690k successfully-executed statements
+      247k unsuccessfuly-executed statements
+queries:     759941
+bugs:          0
+    759941,         0
+[2021/05/22 19:38:22] Executed 43558 queries (8704 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:27] Executed 106843 queries (12657 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:32] Executed 168707 queries (12372 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:37] Executed 230022 queries (12270 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:38:42] Executed 275627 queries (9117 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:38:47] Executed 334283 queries (11735 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:38:52] Executed 388069 queries (10757 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:38:57] Executed 457875 queries (13961 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:39:02] Executed 526966 queries (13815 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:39:07] Executed 589775 queries (12566 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:39:12] Executed 653703 queries (12785 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:39:17] Executed 708520 queries (10959 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,596k successfully-executed statements
+      238k unsuccessfuly-executed statements
+queries:     715803
+bugs:          0
+    715804,         0
+[2021/05/22 19:39:22] Executed 25450 queries (5086 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:27] Executed 64093 queries (7727 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:32] Executed 102279 queries (7632 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:37] Executed 139923 queries (7530 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:42] Executed 173820 queries (6780 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:47] Executed 210077 queries (7249 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:52] Executed 247444 queries (7473 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:39:57] Executed 291628 queries (8836 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:40:02] Executed 333777 queries (8441 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:40:07] Executed 372392 queries (7709 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:40:12] Executed 420570 queries (9643 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:40:17] Executed 470321 queries (9942 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,356k successfully-executed statements
+      489k unsuccessfuly-executed statements
+queries:     477595
+bugs:          0
+    477595,         0
+[2021/05/22 19:40:23] Executed 47467 queries (9485 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:28] Executed 115054 queries (13503 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:33] Executed 181844 queries (13376 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:38] Executed 248778 queries (13386 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:40:43] Executed 307018 queries (11636 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:48] Executed 360330 queries (10664 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:53] Executed 435283 queries (15005 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:40:58] Executed 510946 queries (15132 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:41:03] Executed 574782 queries (12767 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:41:08] Executed 634507 queries (11945 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:41:13] Executed 685850 queries (10282 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:41:18] Executed 735123 queries (9864 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,651k successfully-executed statements
+      242k unsuccessfuly-executed statements
+queries:     741213
+bugs:          0
+    741213,         0
+[2021/05/22 19:41:24] Executed 32993 queries (6597 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:29] Executed 81557 queries (9718 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:34] Executed 130493 queries (9791 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:39] Executed 179610 queries (9825 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:44] Executed 223622 queries (8804 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:49] Executed 275475 queries (10370 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:54] Executed 322903 queries (9487 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:41:59] Executed 374374 queries (10296 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:04] Executed 433426 queries (11810 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:09] Executed 496193 queries (12553 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:14] Executed 555169 queries (11795 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:19] Executed 617093 queries (12384 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,395k successfully-executed statements
+      214k unsuccessfuly-executed statements
+queries:     624422
+bugs:          0
+    624423,         0
+[2021/05/22 19:42:25] Executed 45368 queries (9055 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:30] Executed 116590 queries (14247 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:35] Executed 187946 queries (14271 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:40] Executed 253824 queries (13175 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:45] Executed 315376 queries (12310 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:50] Executed 376745 queries (12273 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:42:55] Executed 447620 queries (14175 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:43:00] Executed 512949 queries (13065 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:43:05] Executed 588622 queries (15134 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:43:10] Executed 652940 queries (12863 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:43:15] Executed 728542 queries (15120 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:43:20] Executed 789198 queries (12131 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         13
+    1,774k successfully-executed statements
+      262k unsuccessfuly-executed statements
+queries:     795975
+bugs:          0
+    795975,         0
+[2021/05/22 19:43:26] Executed 26380 queries (5269 queries/s; 0.80/s dbs, successful statements: 72%). Threads shut down: 0.
+[2021/05/22 19:43:31] Executed 71527 queries (9023 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:43:36] Executed 116022 queries (8904 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:43:41] Executed 160280 queries (8851 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:43:46] Executed 200065 queries (7957 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:43:51] Executed 229639 queries (5914 queries/s; 0.60/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:43:56] Executed 269299 queries (7932 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:44:01] Executed 309190 queries (7978 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:44:06] Executed 349152 queries (7993 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:44:11] Executed 386841 queries (7537 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:44:16] Executed 419284 queries (6488 queries/s; 0.60/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:44:21] Executed 456607 queries (7464 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,310k successfully-executed statements
+      470k unsuccessfuly-executed statements
+queries:     460935
+bugs:          0
+    460935,         0
+[2021/05/22 19:44:27] Executed 39592 queries (7902 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:32] Executed 108385 queries (13761 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:37] Executed 177805 queries (13886 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:42] Executed 246274 queries (13693 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:47] Executed 301770 queries (11099 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:52] Executed 351221 queries (9890 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:44:57] Executed 403128 queries (10381 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:02] Executed 465183 queries (12411 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:07] Executed 521562 queries (11275 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:12] Executed 576429 queries (10975 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:17] Executed 627951 queries (10304 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:22] Executed 685549 queries (11519 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,545k successfully-executed statements
+      234k unsuccessfuly-executed statements
+queries:     692397
+bugs:          0
+    692398,         0
+[2021/05/22 19:45:28] Executed 42049 queries (8389 queries/s; 0.80/s dbs, successful statements: 85%). Threads shut down: 0.
+[2021/05/22 19:45:33] Executed 103012 queries (12195 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:38] Executed 164101 queries (12217 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:43] Executed 225483 queries (12276 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:48] Executed 281969 queries (11297 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:53] Executed 327239 queries (9054 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:45:58] Executed 369875 queries (8527 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:03] Executed 417852 queries (9597 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:08] Executed 465343 queries (9498 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:13] Executed 513032 queries (9551 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:18] Executed 560613 queries (9493 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:23] Executed 603775 queries (8641 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,361k successfully-executed statements
+      207k unsuccessfuly-executed statements
+queries:     610779
+bugs:          0
+    610779,         0
+[2021/05/22 19:46:29] Executed 35284 queries (7042 queries/s; 0.80/s dbs, successful statements: 85%). Threads shut down: 0.
+[2021/05/22 19:46:34] Executed 89732 queries (10891 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:39] Executed 144406 queries (10936 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:44] Executed 198484 queries (10817 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:49] Executed 246909 queries (9692 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:54] Executed 297039 queries (10036 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:46:59] Executed 341906 queries (8959 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:47:04] Executed 395009 queries (10620 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:47:09] Executed 456612 queries (12320 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:47:14] Executed 517526 queries (12182 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:47:19] Executed 569474 queries (10389 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:47:24] Executed 617664 queries (9638 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,392k successfully-executed statements
+      218k unsuccessfuly-executed statements
+queries:     623541
+bugs:          0
+    623541,         0
+[2021/05/22 19:47:30] Executed 27603 queries (5508 queries/s; 0.80/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:47:35] Executed 71641 queries (8823 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:47:40] Executed 116457 queries (8959 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:47:45] Executed 161011 queries (8912 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:47:50] Executed 201133 queries (8014 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:47:55] Executed 239964 queries (7767 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:00] Executed 282232 queries (8450 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:05] Executed 324519 queries (8470 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:10] Executed 364321 queries (7954 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:15] Executed 399639 queries (7060 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:20] Executed 438995 queries (7869 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:48:25] Executed 481468 queries (8496 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,381k successfully-executed statements
+      493k unsuccessfuly-executed statements
+queries:     487781
+bugs:          0
+    487781,         0
+[2021/05/22 19:48:31] Executed 32673 queries (6518 queries/s; 0.80/s dbs, successful statements: 85%). Threads shut down: 0.
+[2021/05/22 19:48:36] Executed 81267 queries (9728 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:48:41] Executed 130163 queries (9777 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:48:46] Executed 178666 queries (9710 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:48:51] Executed 228312 queries (9929 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:48:56] Executed 271409 queries (8624 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:01] Executed 321284 queries (9973 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:06] Executed 377054 queries (11149 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:11] Executed 432322 queries (11053 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:16] Executed 486319 queries (10799 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:21] Executed 532364 queries (9209 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:49:26] Executed 587006 queries (10930 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,326k successfully-executed statements
+      203k unsuccessfuly-executed statements
+queries:     594274
+bugs:          0
+    594275,         0
+[2021/05/22 19:49:32] Executed 50526 queries (10091 queries/s; 0.80/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:49:37] Executed 122161 queries (14332 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:49:42] Executed 192725 queries (14112 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:49:47] Executed 264185 queries (14292 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:49:52] Executed 314162 queries (9995 queries/s; 0.60/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:49:57] Executed 367445 queries (10656 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:02] Executed 424098 queries (11330 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:07] Executed 480594 queries (11299 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:12] Executed 536458 queries (11175 queries/s; 0.00/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:50:17] Executed 583760 queries (9460 queries/s; 0.40/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:50:22] Executed 633102 queries (9868 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:27] Executed 686572 queries (10694 queries/s; 0.20/s dbs, successful statements: 86%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         11
+    1,543k successfully-executed statements
+      230k unsuccessfuly-executed statements
+queries:     693104
+bugs:          0
+    693104,         0
+[2021/05/22 19:50:33] Executed 46456 queries (9287 queries/s; 0.80/s dbs, successful statements: 86%). Threads shut down: 0.
+[2021/05/22 19:50:38] Executed 122201 queries (15152 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:43] Executed 196748 queries (14903 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:48] Executed 262506 queries (13156 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:53] Executed 314778 queries (10456 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:50:58] Executed 372660 queries (11567 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:03] Executed 430086 queries (11494 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:08] Executed 482492 queries (10481 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:13] Executed 536827 queries (10860 queries/s; 0.00/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:18] Executed 587102 queries (10057 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:23] Executed 635687 queries (9720 queries/s; 0.20/s dbs, successful statements: 87%). Threads shut down: 0.
+[2021/05/22 19:51:28] Executed 691756 queries (11213 queries/s; 0.40/s dbs, successful statements: 87%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,543k successfully-executed statements
+      218k unsuccessfuly-executed statements
+queries:     698534
+bugs:          0
+    698535,         0
+[2021/05/22 19:51:34] Executed 25569 queries (5109 queries/s; 0.80/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:51:39] Executed 62281 queries (7343 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:51:44] Executed 99618 queries (7467 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:51:49] Executed 136618 queries (7401 queries/s; 0.00/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:51:54] Executed 171548 queries (6987 queries/s; 0.20/s dbs, successful statements: 74%). Threads shut down: 0.
+[2021/05/22 19:51:59] Executed 208004 queries (7291 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:04] Executed 245633 queries (7525 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:09] Executed 276733 queries (6220 queries/s; 0.40/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:14] Executed 314997 queries (7652 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:19] Executed 348919 queries (6781 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:24] Executed 385832 queries (7387 queries/s; 0.20/s dbs, successful statements: 73%). Threads shut down: 0.
+[2021/05/22 19:52:29] Executed 425513 queries (7933 queries/s; 0.00/s dbs, successful statements: 73%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         10
+    1,220k successfully-executed statements
+      433k unsuccessfuly-executed statements
+queries:     430070
+bugs:          0
+    430070,         0
+[2021/05/22 19:52:34] Executed 34868 queries (6963 queries/s; 0.80/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:52:39] Executed 89680 queries (10968 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:52:44] Executed 144550 queries (10974 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:52:49] Executed 196311 queries (10348 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:52:54] Executed 248986 queries (10537 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:52:59] Executed 296311 queries (9470 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:04] Executed 353067 queries (11348 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:09] Executed 413384 queries (12056 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:14] Executed 470955 queries (11523 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:19] Executed 519007 queries (9610 queries/s; 0.40/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:24] Executed 570517 queries (10304 queries/s; 0.00/s dbs, successful statements: 79%). Threads shut down: 0.
+[2021/05/22 19:53:29] Executed 617591 queries (9414 queries/s; 0.20/s dbs, successful statements: 79%). Threads shut down: 0.
+Overall execution statistics
+============================
+databases:         12
+    1,574k successfully-executed statements
+      411k unsuccessfuly-executed statements
+queries:     624741
+bugs:          0
+    624741,         0
