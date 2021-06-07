@@ -8,3 +8,5 @@ target/
 .project
 .checkstyle
 *.DS_Store
+.idea
+SQLancer.iml
